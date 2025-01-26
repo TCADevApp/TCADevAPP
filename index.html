@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site de gestion des lignes de transport public TRANSCO à Kinshasa.">
+    <title>TCA - Accueil</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">TCA</div>
+        <div class="header__burger">☰</div>
+        <nav class="header__menu">
+          <a href="index.html">Accueil</a>
+          <a href="lines.html">Lignes</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">À propos</a>
+        </nav>
+        <form class="header__search">
+          <input type="text" placeholder="Rechercher...">
+          <button type="submit">Recherche</button>
+        </form>
+    </header>
+
+    <main class="home">
+      <h2 class="home__welcome">Bienvenue sur le site TCA</h2>
+      <section class="home__lines">
+        <h3>Nos lignes principales :</h3>
+        <p class="home__line">1. Ligne Masina - Kintambo</p>
+        <p class="home__line">2. Ligne Ngaba - UPN</p>
+        <p class="home__line">3. Ligne Gombe - Bandal</p>
+        <p class="home__line">4. Ligne Matete - Limete</p>
+      </section>
+  
+      <section class="home__cta">
+        <h3>Recevez des informations par mail</h3>
+        <form id="subscribeForm">
+          <input type="text" name="name" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre adresse mail" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </section>
+  
+      <section class="home__contact">
+        <h3>Contactez-nous ou en savoir plus</h3>
+        <p>
+          <a href="contact.html">Contactez l'administrateur</a> ou 
+          <a href="about.html">en savoir plus sur TRANSCO</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 TRANSCO Kinshasa. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

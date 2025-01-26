@@ -1,0 +1,132 @@
+/* Variables globales */
+:root {
+    --blue: #0056b3;
+    --red: #d62828;
+    --yellow: #fcbf49;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+  }
+  
+  /* Réinitialisation */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--blue);
+    line-height: 1.6;
+  }
+  
+  /* HEADER */
+  .header {
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--blue);
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header__menu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  
+  .header__menu a:hover {
+    background-color: var(--red);
+  }
+  
+  .header__burger {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header__search input {
+    padding: 0.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .header__search button {
+    background-color: var(--yellow);
+    color: var(--blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* CONTENU DES PAGES */
+  .main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .main__title {
+    font-size: 2rem;
+    color: var(--red);
+    text-align: center;
+  }
+  
+  .main__text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  /* RESPONSIVITÉ */
+  @media (max-width: 768px) {
+    .header__search {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  
+    .header__menu {
+      width: 100%;
+    }
+  }
