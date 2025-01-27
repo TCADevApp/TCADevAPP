@@ -13,6 +13,21 @@ logo.addEventListener('click', () => {
   window.location.href = 'index.html';
 });
 
+// Base de données des lignes de transport
+const lignesDeTransport = [
+  {
+    id: 1,
+    nom: "Masina - Kintambo",
+    distance: "30 km",
+    busActifs: 25,
+    arrets: [
+      { nom: "Masina", lien: "https://maps.google.com?q=Masina" },
+      { nom: "Kintambo", lien: "https://maps.google.com?q=Kintambo" },
+    ],
+  },
+  // Ajouter les 52 lignes ici
+];
+
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
 const searchInput = document.querySelector('.header__search input');
@@ -45,20 +60,6 @@ searchForm.addEventListener('submit', (e) => {
         alert('Veuillez remplir tous les champs.');
         }
     });
-// Base de données des lignes de transport
-const lignesDeTransport = [
-    {
-      id: 1,
-      nom: "Masina - Kintambo",
-      distance: "30 km",
-      busActifs: 25,
-      arrets: [
-        { nom: "Masina", lien: "https://maps.google.com?q=Masina" },
-        { nom: "Kintambo", lien: "https://maps.google.com?q=Kintambo" },
-      ],
-    },
-    // Ajouter les 52 lignes ici
-  ];
   
 // Fonction pour afficher les détails d'une ligne
   function afficherDetailsLigne(id) 

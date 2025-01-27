@@ -38,23 +38,32 @@
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 10px;
   }
   
   .header__menu {
-    display: none;
-    flex-direction: column;
     background-color: var(--blue);
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 40px;
   }
   
   .header__menu a {
     color: var(--white);
+    width: 30%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    padding: 0.8rem;
     text-align: center;
+  }
+
+  .header__menu a svg {
+    width: 70%;
+    height: 70%;
   }
   
   .header__menu a:hover {
@@ -62,32 +71,35 @@
   }
   
   .header__burger {
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+    display: none;
   }
   
   .header__search {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    width: 40%;
+    height: 40px;
   }
   
   .header__search input {
-    padding: 0.5rem;
-    border: 1px solid var(--gray);
-    border-radius: 5px;
+    border: none;
+    width: 84%;
+    height: 95%;
     outline: none;
   }
   
   .header__search button {
-    background-color: var(--yellow);
-    color: var(--blue);
+    height: 95%;
+    width: 15%;
+    padding: 5px;
     border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   /* FOOTER */
@@ -127,6 +139,20 @@
     }
   
     .header__menu {
+      display: none;
       width: 100%;
+      flex-direction: column;
+      background-color: var(--blue);
+      position: absolute;
+      top: 100%;
+      right: 1rem;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header__burger {
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
     }
   }
