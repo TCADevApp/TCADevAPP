@@ -16,17 +16,111 @@ logo.addEventListener('click', () => {
 // Base de données des lignes de transport
 const lignesDeTransport = [
   {
+    Test: "Test",
+  },
+  {
     id: 1,
-    nom: "Masina - Kintambo",
-    distance: "30 km",
-    busActifs: 25,
+    nom: "Gare Centrale - Kingasani",
+    distance: "18 km",
+    busActifs: 5,
     arrets: [
-      { nom: "Masina", lien: "https://maps.google.com?q=Masina" },
-      { nom: "Kintambo", lien: "https://maps.google.com?q=Kintambo" },
+      { nom: "Gare Central", lien: "https://maps.google.com?q=GareCentral" },
+      { nom: "Kingasani", lien: "https://maps.google.com?q=Kingasani" },
     ],
   },
+  {
+    id: 2,
+    nom: "Gare Central - Kintambo",
+    distance: "6 Km",
+    busActifs: 3,
+    arrets: [
+      {arret1: "Gare Central", lien: "https://maps.google.com?q=GareCentral"},
+      {arret1: "Kintambo", lien: "https://maps.google.com?q=Kitambo"},
+    ]
+  },
+  {
+    id: 3,
+    nom: "Zando - Ronp Point Ngaba",
+    distance: "15 Km",
+    busActifs: 5,
+    arrets: [
+      {arret: "Zando", lien: "https://maps.google.com?q=Zando"},
+      {arret1: "Rond Point Ngaba", lien: "https://maps.google.com?q=RondPointNgaba"},
+    ]
+  },
+  {
+    id: 4,
+    nom: "Zando - Matete",
+    distance: "12 Km",
+    busActifs: 3,
+    arrets: [
+      {arret: "Zando", lien: "https://maps.google.com?q=Zando"},
+      {arret1: "Matete", lien: "https://maps.google.com?q=Matete"},
+    ]
+  },
   // Ajouter les 52 lignes ici
-];
+]; 
+
+// Affichage des lignes sur la home__page
+const homeLineList = document.querySelector('.home__lines--list');
+
+  //Ligne 1
+  const ligne1Nom = document.createElement('p');
+  ligne1Nom.textContent = lignesDeTransport[1].nom;
+  const ligne1Id = document.createElement('p');
+  ligne1Id.textContent = lignesDeTransport[1].id;
+  const ligne1Distance = document.createElement('p');
+  ligne1Distance.textContent = lignesDeTransport[1].distance;
+
+  const ligne1 = document.createElement('div');
+  ligne1.appendChild(ligne1Nom);
+  ligne1.appendChild(ligne1Id);
+  ligne1.appendChild(ligne1Distance);
+
+  //lignes 2
+  const ligne2Nom = document.createElement('p');
+  ligne2Nom.textContent = lignesDeTransport[2].nom;
+  const ligne2Id = document.createElement('p');
+  ligne2Id.textContent = lignesDeTransport[2].id;
+  const ligne2Distance = document.createElement('p');
+  ligne2Distance.textContent = lignesDeTransport[2].distance;
+
+  const ligne2 = document.createElement('div');
+  ligne2.appendChild(ligne2Nom);
+  ligne2.appendChild(ligne2Id);
+  ligne2.appendChild(ligne2Distance);
+
+  // Ligne 3
+  const ligne3Nom = document.createElement('p');
+  ligne3Nom.textContent = lignesDeTransport[3].nom;
+  const ligne3Id = document.createElement('p');
+  ligne3Id.textContent = lignesDeTransport[3].id;
+  const ligne3Distance = document.createElement('p');
+  ligne3Distance.textContent = lignesDeTransport[3].distance;
+
+  const ligne3 = document.createElement('div');
+  ligne3.appendChild(ligne3Nom);
+  ligne3.appendChild(ligne3Id);
+  ligne3.appendChild(ligne3Distance);
+
+  // Ligne 4
+  const ligne4Nom = document.createElement('p');
+  ligne4Nom.textContent = lignesDeTransport[4].nom;
+  const ligne4Id = document.createElement('p');
+  ligne4Id.textContent = lignesDeTransport[4].id;
+  const ligne4Distance = document.createElement('p');
+  ligne4Distance.textContent = lignesDeTransport[4].distance;
+
+  const ligne4 = document.createElement('div');
+  ligne4.appendChild(ligne4Nom);
+  ligne4.appendChild(ligne4Id);
+  ligne4.appendChild(ligne4Distance);
+
+homeLineList.appendChild(ligne1);
+homeLineList.appendChild(ligne2);
+homeLineList.appendChild(ligne3);
+homeLineList.appendChild(ligne4);
+console.log(homeLineList);
 
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
