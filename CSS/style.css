@@ -125,6 +125,13 @@
     text-align: center;
   }
 
+  .main__text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
   .home__welcome {
     display: flex;
     justify-content: center;
@@ -177,11 +184,31 @@
     padding: 1rem;
   }
 
-  .main__text {
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.8;
-    text-align: justify;
+  .home__lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 300px;
+  }
+
+  .home__lines--image {
+    width: 25%;
+    height: 80%;
+    border-radius: 10px;
+    padding: auto;
+  }
+
+  .home__lines--container {
+    background-color: rgb(125, 125, 25);
+    width: 50%;
+    height: 80%;
+    gap: 1rem;
+  }
+
+  .home__lines--list {
+    display: flex;
+    flex-wrap: wrap;
   }
   
   /* RESPONSIVITÉ */
