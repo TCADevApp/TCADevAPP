@@ -112,13 +112,7 @@
     margin-top: 2rem;
   }
   
-  /* CONTENU DES PAGES */
-  .main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+  /* CONTENU DE LA PAGE D'ACCUEILLE */
   .main__title {
     font-size: 2rem;
     color: var(--red);
@@ -224,10 +218,18 @@
   .home__lines a{
     color: var(--blue);
     align-self: flex-end;
-    border-style: none;
   }
   
-  
+  /*CONTENUE DE LA PAGE LIGNES LIST*/
+  .main__lines{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list__container{
+    background-color: var(--gray);
+    width: 150px;
+  }
   /* RESPONSIVITÉ */
   @media (max-width: 768px) {
     .header__search {

@@ -450,6 +450,34 @@ const lignesDeTransport = [
   },
 ]; 
 
+// Affichage des lignes dans la page lines__page
+
+for (let i = 0; i < lignesDeTransport.length; i++) {
+  const listDeLignes = document.querySelector('.lines__list--container');
+  const ligneTrajet = document.createElement('li');
+  ligneTrajet.classList.add('list__container');
+
+  const ligneId = document.createElement('p');
+  ligneId.textContent = lignesDeTransport[i].id;
+  const ligneNom = document.createElement('p');
+  ligneNom.textContent = lignesDeTransport[i].nom;
+  const ligneDistance = document.createElement('p');
+  ligneDistance.textContent = lignesDeTransport[i].distance;
+  const ligneBusActifs = document.createElement('p');
+  ligneBusActifs.textContent = lignesDeTransport[i].busActifs;
+
+  ligneTrajet.appendChild(ligneId);
+  ligneTrajet.appendChild(ligneNom);
+  ligneTrajet.appendChild(ligneDistance);
+  ligneTrajet.appendChild(ligneBusActifs);
+
+  try {
+    listDeLignes.appendChild(ligneTrajet);
+  } catch (error) {
+    
+  }
+}
+
 // Affichage des lignes sur la home__page
 const homeLineList = document.querySelector('.home__lines--list');
 
@@ -505,11 +533,12 @@ const homeLineList = document.querySelector('.home__lines--list');
   ligne4.appendChild(ligne4Nom);
   ligne4.appendChild(ligne4Distance);
 
-homeLineList.appendChild(ligne1);
-homeLineList.appendChild(ligne2);
-homeLineList.appendChild(ligne3);
-homeLineList.appendChild(ligne4);
-console.log(homeLineList);
+try {
+  homeLineList.appendChild(ligne1);
+  homeLineList.appendChild(ligne2);
+  homeLineList.appendChild(ligne3);
+  homeLineList.appendChild(ligne4);
+} catch (error) {}
 
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
