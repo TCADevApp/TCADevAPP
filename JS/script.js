@@ -58,7 +58,7 @@ const lignesDeTransport = [
       {arret1: "Gare Central", lien: "https://maps.google.com?q=GareCentral"},
     ]
   },
-  // Ajouter les 52 lignes ici
+  // Ajouter les 39 lignes ici
 ]; 
 
 // Affichage des lignes sur la home__page

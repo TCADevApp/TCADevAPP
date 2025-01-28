@@ -213,12 +213,20 @@
     justify-content: center;
     align-items: center;
   }
+
   .home__lines--list div{
     width: 45%;
     height: 45%;
     padding: 10px;
     border-radius: 20px;
   }
+
+  .home__lines a{
+    color: var(--blue);
+    align-self: flex-end;
+    border-style: none;
+  }
+  
   
   /* RESPONSIVITÉ */
   @media (max-width: 768px) {
