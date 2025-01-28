@@ -24,8 +24,8 @@ const lignesDeTransport = [
     distance: "18 km",
     busActifs: "Bus Actif 05",
     arrets: [
-      { nom: "Commerce", lien: "https://maps.google.com?q=GareCentral" },
-      { nom: "Kingasani", lien: "https://maps.google.com?q=Kingasani" },
+      { nom: "Commerce", lien: "" },
+      { nom: "Kingasani", lien: "" },
     ],
   },
   {
@@ -34,9 +34,9 @@ const lignesDeTransport = [
     distance: "12 Km",
     busActifs: "Bus Actif 05",
     arrets: [
-      {arret1: "Royal", lien: "https://maps.google.com?q=Royal"},
-      {arret1: "Masina Sans Fil", lien: "https://maps.google.com?q=Masina Sans Fil"},
-    ]
+      { nom: "Royal", lien: "" },
+      { nom: "Masina Sans Fil", lien: "" },
+    ],
   },
   {
     id: "Ligne 03",
@@ -44,9 +44,9 @@ const lignesDeTransport = [
     distance: "15 Km",
     busActifs: "Bus Actif 03",
     arrets: [
-      {arret: "Gare Central", lien: "https://maps.google.com?q=GareCentral"},
-      {arret1: "Ngiri Ngiri", lien: "https://maps.google.com?q=NgiriNgiri"},
-    ]
+      { nom: "Gare Central", lien: "" },
+      { nom: "Ngiri Ngiri", lien: "" },
+    ],
   },
   {
     id: "Ligne 04",
@@ -54,11 +54,400 @@ const lignesDeTransport = [
     distance: "12 Km",
     busActifs: "Bus Actif 05",
     arrets: [
-      {arret: "UPN", lien: "https://maps.google.com?q=UPN"},
-      {arret1: "Gare Central", lien: "https://maps.google.com?q=GareCentral"},
-    ]
+      { nom: "UPN", lien: "" },
+      { nom: "Gare Central", lien: "" },
+    ],
   },
-  // Ajouter les 39 lignes ici
+  {
+    id: "Ligne 05",
+    nom: "Ngiri-Ngiri - Gare Centrale",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Ngiri-Ngiri", lien: "" },
+      { nom: "Gare Centrale", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 06",
+    nom: "Petro Congo - Zando",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Petro Congo", lien: "" },
+      { nom: "Zando", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 07",
+    nom: "HRGK (Mama Yemo) - Mbudi",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "HRGK (Mama Yemo)", lien: "" },
+      { nom: "Mbudi", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 08",
+    nom: "Intendance - Zando",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Intendance", lien: "" },
+      { nom: "Zando", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 09",
+    nom: "UPN - Victoire",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Victoire", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 10",
+    nom: "Gare Centrale - UPN",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Gare Centrale", lien: "" },
+      { nom: "UPN", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 11",
+    nom: "Debon-Homme - Kinkole",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Debon-Homme", lien: "" },
+      { nom: "Kinkole", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 12",
+    nom: "UPN - Matete (Marché)",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Matete (Marché)", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 13",
+    nom: "Victoire - UPN",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Victoire", lien: "" },
+      { nom: "UPN", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 14",
+    nom: "Selembao - Zando",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Selembao", lien: "" },
+      { nom: "Zando", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 15",
+    nom: "UPN - Mitendi",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Mitendi", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 16",
+    nom: "Mbudi - HRGK (Mama Yemo)",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Mbudi", lien: "" },
+      { nom: "HRGK (Mama Yemo)", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 17",
+    nom: "UPN - Campus Trafic",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Campus Trafic", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 18",
+    nom: "Zando - Matete (Marché)",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Zando", lien: "" },
+      { nom: "Matete (Marché)", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 19",
+    nom: "Gare Centrale - Ngiri-Ngiri",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Gare Centrale", lien: "" },
+      { nom: "Ngiri-Ngiri", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 20",
+    nom: "Rond Point Ngaba - Place des évolués",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Rond Point Ngaba", lien: "" },
+      { nom: "Place des évolués", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 21",
+    nom: "Bandal Tshibangu - Onatra",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Bandal Tshibangu", lien: "" },
+      { nom: "Onatra", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 22",
+    nom: "Zando - Kimbanseke (Cimetière)",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Zando", lien: "" },
+      { nom: "Kimbanseke (Cimetière)", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 23",
+    nom: "Fonction Publique - Pascal",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Fonction Publique", lien: "" },
+      { nom: "Pascal", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 24",
+    nom: "Gambela - Mbudi",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Gambela", lien: "" },
+      { nom: "Mbudi", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 25",
+    nom: "Kinsuka - Gare Centrale",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Gare Centrale", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 26",
+    nom: "Matete - Gare Centrale",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Matete", lien: "" },
+      { nom: "Gare Centrale", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 27",
+    nom: "UPN - Kinsuka",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Kinsuka", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 28",
+    nom: "Kinkole - Gare Centrale",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinkole", lien: "" },
+      { nom: "Gare Centrale", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 29",
+    nom: "Ngiri-Ngiri - Kinsuka",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Ngiri-Ngiri", lien: "" },
+      { nom: "Kinsuka", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 30",
+    nom: "Matete - Kinsuka",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Matete", lien: "" },
+      { nom: "Kinsuka", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 31",
+    nom: "Zando - Kinsuka",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Zando", lien: "" },
+      { nom: "Kinsuka", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 32",
+    nom: "UPN - Zando",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "UPN", lien: "" },
+      { nom: "Zando", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 33",
+    nom: "Kinsuka - UPN",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "UPN", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 34",
+    nom: "Kinsuka - Matete",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Matete", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 35",
+    nom: "Kinsuka - Ngiri-Ngiri",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Ngiri-Ngiri", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 36",
+    nom: "Kinsuka - Bandal",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Bandal", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 37",
+    nom: "Kinsuka - Debon-Homme",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Debon-Homme", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 38",
+    nom: "Kinsuka - HRGK",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "HRGK", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 39",
+    nom: "Kinsuka - Victoire",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Victoire", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 40",
+    nom: "Kinsuka - Intendance",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Intendance", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 41",
+    nom: "Kinsuka - Petro Congo",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Petro Congo", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 42",
+    nom: "Kinsuka - Selembao",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Selembao", lien: "" },
+    ],
+  },
+  {
+    id: "Ligne 43",
+    nom: "Kinsuka - Mitendi",
+    distance: "5 Km",
+    busActifs: "Bus Actif 05",
+    arrets: [
+      { nom: "Kinsuka", lien: "" },
+      { nom: "Mitendi", lien: "" },
+    ],
+  },
 ]; 
 
 // Affichage des lignes sur la home__page
