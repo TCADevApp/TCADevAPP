@@ -542,25 +542,41 @@ const searchForm = document.querySelector('.header__search');
 const searchInput = document.querySelector('.header__search input');
 const listRecherche = document.querySelector('.search__list');
 
-searchInput.addEventListener('click', () => {
-  listRecherche.style.display = listRecherche.style.display === 'flex' ? 'none' : 'flex';
-  for (let index = 0; index < lignesDeTransport.length; index++) {
-    const array = [lignesDeTransport[index].nom];
-    console.log(array);
+// Écouteur d'événement sur la saisie dans l'input de recherche
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim(); // Récupère et nettoie la valeur saisie
+  listRecherche.innerHTML = ''; // Efface les résultats précédents
 
-    const query = searchInput.value.toLowerCase().trim();
-    
-    if (query !== null && query.includes(array)) {
-      for (let i = query; i.includes(array); i++) {        
-        const ligneResultat = document.createElement('p');
-        ligneResultat.textContent = array[i];
+  if (query.length === 0) {
+    listRecherche.style.display = 'none'; // Cache la liste si aucun texte n'est saisi
+    return;
+  }
 
-        try {
-          listRecherche.appendChild(ligneResultat);
-        } catch (error) {
-        }
+  const results = lignesDeTransport.filter((ligne) => 
+    ligne.nom && ligne.nom.toLowerCase().includes(query) // Vérifie si le nom de la ligne correspond à la recherche
+  );
+
+  if (results.length > 0) {
+    listRecherche.style.display = 'flex'; // Affiche la liste des résultats
+
+    results.forEach((ligne) => {
+      const ligneResultat = document.createElement('p');
+      ligneResultat.textContent = ligne.nom; // Ajoute le nom de la ligne dans la liste
+      ligneResultat.classList.add('search__result'); // Ajoute une classe pour le style si besoin
+
+      // Ajout du résultat à la liste
+      try {
+        listRecherche.appendChild(ligneResultat);
+      } catch (error) {
+        console.error('Erreur lors de l’ajout du résultat :', error);
       }
-    }
+    });
+  } else {
+    // Si aucun résultat, on affiche un message
+    const noResult = document.createElement('p');
+    noResult.textContent = 'Aucun résultat trouvé.';
+    noResult.classList.add('search__no-result');
+    listRecherche.appendChild(noResult);
   }
 });
 
