@@ -16,9 +16,6 @@ logo.addEventListener('click', () => {
 // Base de données des lignes de transport
 const lignesDeTransport = [
   {
-    Test: "Test",
-  },
-  {
     id: "Ligne 01",
     nom: "Commerce - Kingasani",
     distance: "18 km",
@@ -483,11 +480,11 @@ const homeLineList = document.querySelector('.home__lines--list');
 
   //Ligne 1
   const ligne1Id = document.createElement('p');
-  ligne1Id.textContent = lignesDeTransport[1].id;
+  ligne1Id.textContent = lignesDeTransport[0].id;
   const ligne1Nom = document.createElement('p');
-  ligne1Nom.textContent = lignesDeTransport[1].nom;
+  ligne1Nom.textContent = lignesDeTransport[0].nom;
   const ligne1Distance = document.createElement('p');
-  ligne1Distance.textContent = lignesDeTransport[1].distance;
+  ligne1Distance.textContent = lignesDeTransport[0].distance;
 
   const ligne1 = document.createElement('div');
   ligne1.appendChild(ligne1Id);
@@ -496,11 +493,11 @@ const homeLineList = document.querySelector('.home__lines--list');
 
   //lignes 2
   const ligne2Id = document.createElement('p');
-  ligne2Id.textContent = lignesDeTransport[2].id;
+  ligne2Id.textContent = lignesDeTransport[1].id;
   const ligne2Nom = document.createElement('p');
-  ligne2Nom.textContent = lignesDeTransport[2].nom;
+  ligne2Nom.textContent = lignesDeTransport[1].nom;
   const ligne2Distance = document.createElement('p');
-  ligne2Distance.textContent = lignesDeTransport[2].distance;
+  ligne2Distance.textContent = lignesDeTransport[1].distance;
 
   const ligne2 = document.createElement('div');
   ligne2.appendChild(ligne2Id);
@@ -509,11 +506,11 @@ const homeLineList = document.querySelector('.home__lines--list');
 
   // Ligne 3
   const ligne3Id = document.createElement('p');
-  ligne3Id.textContent = lignesDeTransport[3].id;
+  ligne3Id.textContent = lignesDeTransport[2].id;
   const ligne3Nom = document.createElement('p');
-  ligne3Nom.textContent = lignesDeTransport[3].nom;
+  ligne3Nom.textContent = lignesDeTransport[2].nom;
   const ligne3Distance = document.createElement('p');
-  ligne3Distance.textContent = lignesDeTransport[3].distance;
+  ligne3Distance.textContent = lignesDeTransport[2].distance;
 
   const ligne3 = document.createElement('div');
   ligne3.appendChild(ligne3Id);
@@ -522,11 +519,11 @@ const homeLineList = document.querySelector('.home__lines--list');
 
   // Ligne 4
   const ligne4Id = document.createElement('p');
-  ligne4Id.textContent = lignesDeTransport[4].id;
+  ligne4Id.textContent = lignesDeTransport[3].id;
   const ligne4Nom = document.createElement('p');
-  ligne4Nom.textContent = lignesDeTransport[4].nom;
+  ligne4Nom.textContent = lignesDeTransport[3].nom;
   const ligne4Distance = document.createElement('p');
-  ligne4Distance.textContent = lignesDeTransport[4].distance;
+  ligne4Distance.textContent = lignesDeTransport[3].distance;
 
   const ligne4 = document.createElement('div');
   ligne4.appendChild(ligne4Id);
@@ -543,9 +540,39 @@ try {
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
 const searchInput = document.querySelector('.header__search input');
+const listRecherche = document.querySelector('.search__list');
+
+searchInput.addEventListener('click', () => {
+  listRecherche.style.display = listRecherche.style.display === 'flex' ? 'none' : 'flex';
+  for (let index = 0; index < lignesDeTransport.length; index++) {
+    const array = [lignesDeTransport[index].nom];
+    console.log(array);
+
+    const query = searchInput.value.toLowerCase().trim();
+    
+    if (query !== null && query.includes(array)) {
+      for (let i = query; i.includes(array); i++) {        
+        const ligneResultat = document.createElement('p');
+        ligneResultat.textContent = array[i];
+
+        try {
+          listRecherche.appendChild(ligneResultat);
+        } catch (error) {
+        }
+      }
+    }
+  }
+});
+
+const hideListSearch = document.querySelector('main');
+hideListSearch.addEventListener('click', () => {
+  listRecherche.style.display = listRecherche.style.display === 'none' ? 'flex' : 'none';
+  }
+);
 
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
+
   const query = searchInput.value.toLowerCase().trim();
 
   // Logique de recherche
@@ -557,6 +584,7 @@ searchForm.addEventListener('submit', (e) => {
     alert('Aucune correspondance trouvée.');
   }
 });
+
 // Formulaire de souscription
     document.getElementById('subscribeForm').addEventListener('submit', function(e) 
     {
