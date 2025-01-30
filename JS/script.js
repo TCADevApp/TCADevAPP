@@ -458,15 +458,9 @@ for (let i = 0; i < lignesDeTransport.length; i++) {
   ligneId.textContent = lignesDeTransport[i].id;
   const ligneNom = document.createElement('p');
   ligneNom.textContent = lignesDeTransport[i].nom;
-  const ligneDistance = document.createElement('p');
-  ligneDistance.textContent = lignesDeTransport[i].distance;
-  const ligneBusActifs = document.createElement('p');
-  ligneBusActifs.textContent = lignesDeTransport[i].busActifs;
 
   ligneTrajet.appendChild(ligneId);
   ligneTrajet.appendChild(ligneNom);
-  ligneTrajet.appendChild(ligneDistance);
-  ligneTrajet.appendChild(ligneBusActifs);
 
   try {
     listDeLignes.appendChild(ligneTrajet);
@@ -529,7 +523,7 @@ function afficherDetailsLigne(id) {
       overlay.style.zIndex = 1000;
 
       overlay.innerHTML = `
-          <div>
+          <div class="overlay__content">
               <h2>${ligne.nom}</h2>
               <p>Distance : ${ligne.distance}</p>
               <p>Nombre de bus actifs : ${ligne.busActifs}</p>
@@ -584,10 +578,81 @@ function afficherDetailsLigne(id) {
   }
 });
 
+// Écouteur d'événements pour afficher ou masquer la liste de recherche
 const main = document.querySelector('main')
 main.addEventListener('click', () => {
   listRecherche.style.display = listRecherche.style.display === 'none' ? 'flex' : 'none';
 });
+
+// Fonction pour afficher les détails d'une ligne
+function afficherDetailsLigneDepuisListe() {
+  const containersLignes = document.querySelectorAll('.lines__list--container');
+  const detailsLineContainer = document.querySelector('.details__line');
+  const detailsContainer = document.querySelector('.lines__details--container');
+
+  containersLignes.forEach(container => {
+      container.addEventListener('click', function() {
+          // Récupérer l'ID à partir du texte contenu dans le premier paragraphe
+          const nomLigne = container.querySelector('li').lastChild.textContent;
+
+          // Trouver la ligne correspondante dans le tableau lignesDeTransport
+          const ligne = lignesDeTransport.find((ligne) => ligne.nom === nomLigne);
+          console.log(ligne);
+
+          if (ligne) {
+              // Vérifie si la div details__line est déjà visible
+              if (detailsLineContainer.style.display === 'block') {
+                  // Réinitialiser la div details__line
+                  detailsLineContainer.innerHTML = '';
+              } else {
+                  detailsContainer.style.display = 'none'; // Cacher le conteneur des détails de la ligne
+                  detailsLineContainer.style.display = 'block'; // Rendre visible
+              }
+
+              // Créer et ajouter les éléments pour les détails de la ligne
+              const idElement = document.createElement('p');
+              idElement.textContent = `ID : ${ligne.id}`;
+
+              const nomElement = document.createElement('p');
+              nomElement.textContent = `Nom : ${ligne.nom}`;
+
+              const distanceElement = document.createElement('p');
+              distanceElement.textContent = `Distance : ${ligne.distance}`;
+
+              const arretsTitre = document.createElement('h3');
+              arretsTitre.textContent = 'Arrêts :';
+
+              const arretsList = document.createElement('ul');
+              ligne.arrets.forEach((arret) => {
+                  const arretItem = document.createElement('li');
+                  arretItem.textContent = arret.nom;
+                  arretsList.appendChild(arretItem);
+              });
+
+              // Créer un bouton pour fermer
+              const closeButton = document.createElement('button');
+              closeButton.textContent = 'Fermer';
+              closeButton.addEventListener('click', () => {
+                  // Réinitialiser la div details__line
+                  detailsLineContainer.innerHTML = '';
+                  detailsLineContainer.style.display = 'none'; // Cacher la div details__line
+                  detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
+              });
+
+              // Ajouter les éléments à la div details__line
+              detailsLineContainer.appendChild(idElement);
+              detailsLineContainer.appendChild(nomElement);
+              detailsLineContainer.appendChild(distanceElement);
+              detailsLineContainer.appendChild(arretsTitre);
+              detailsLineContainer.appendChild(arretsList);
+              detailsLineContainer.appendChild(closeButton);
+          }
+      });
+  });
+}
+// Appeler la fonction pour activer l'écoute des clics
+afficherDetailsLigneDepuisListe();
+
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 

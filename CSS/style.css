@@ -286,14 +286,67 @@
   
   /*CONTENUE DE LA PAGE LIGNES LIST*/
   .main__lines{
+    background-color: var(--blue);
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2rem; 
+  }
+
+  .main__lines section{
+    background-color: var(--white);    
+    height: 600px;
+  }
+
+  .lines__list{
+    width: 35%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .lines__list h2{
+    text-align: center;
   }
 
   .list__container{
-    background-color: var(--gray);
-    width: 150px;
+    width: 80%;
+    gap: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
   }
+
+  .list__container:hover{
+    background-color: var(--yellow);
+  }
+
+  .list__details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .lines__details{
+    width: 60%;
+  }
+
+  .lines__details--container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .details__line{
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
   /* RESPONSIVITÉ */
   @media (max-width: 768px) {
     .header__search {
