@@ -491,6 +491,63 @@ try {
 } catch (error) {}
 }
 
+// Fonction pour trouver un element dans le tableau
+function trouverElementDuTableau(idLigne) {
+  const detailsLineContainer = document.querySelector('.details__line');
+  const detailsContainer = document.querySelector('.lines__details--container');
+  // Trouver la ligne correspondante dans le tableau lignesDeTransport
+  const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
+
+  if (ligne) {
+      // Vérifie si la div details__line est déjà visible
+      if (detailsLineContainer.style.display === 'block') {
+          // Réinitialiser la div details__line
+          detailsLineContainer.innerHTML = '';
+      } else {
+          detailsContainer.style.display = 'none'; // Cacher le conteneur des détails de la ligne
+          detailsLineContainer.style.display = 'block'; // Rendre visible
+      }
+
+      // Créer et ajouter les éléments pour les détails de la ligne
+      const idElement = document.createElement('p');
+      idElement.textContent = `ID : ${ligne.id}`;
+
+      const nomElement = document.createElement('p');
+      nomElement.textContent = `Nom : ${ligne.nom}`;
+
+      const distanceElement = document.createElement('p');
+      distanceElement.textContent = `Distance : ${ligne.distance}`;
+
+      const arretsTitre = document.createElement('h3');
+      arretsTitre.textContent = 'Arrêts :';
+
+      const arretsList = document.createElement('ul');
+      ligne.arrets.forEach((arret) => {
+          const arretItem = document.createElement('li');
+          arretItem.textContent = arret.nom;
+          arretsList.appendChild(arretItem);
+      });
+
+      // Créer un bouton pour fermer
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Fermer';
+      closeButton.addEventListener('click', () => {
+          // Réinitialiser la div details__line
+          detailsLineContainer.innerHTML = '';
+          detailsLineContainer.style.display = 'none'; // Cacher la div details__line
+          detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
+      });
+
+      // Ajouter les éléments à la div details__line
+      detailsLineContainer.appendChild(idElement);
+      detailsLineContainer.appendChild(nomElement);
+      detailsLineContainer.appendChild(distanceElement);
+      detailsLineContainer.appendChild(arretsTitre);
+      detailsLineContainer.appendChild(arretsList);
+      detailsLineContainer.appendChild(closeButton);
+  }
+}
+
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
 const searchInput = document.querySelector('.header__search input');
@@ -506,45 +563,6 @@ searchInput.addEventListener('input', () => {
     return;
   }
 
-  // Fonction pour afficher les détails d'une ligne
-function afficherDetailsLigne(id) {
-  const ligne = lignesDeTransport.find((ligne) => ligne.id === id);
-  
-  if (ligne) {
-      const overlay = document.createElement('div');
-      overlay.style.position = 'fixed';
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = '100%';
-      overlay.style.height = '100%';
-      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-      overlay.style.color = '#fff';
-      overlay.style.padding = '20px';
-      overlay.style.zIndex = 1000;
-
-      overlay.innerHTML = `
-          <div class="overlay__content">
-              <h2>${ligne.nom}</h2>
-              <p>Distance : ${ligne.distance}</p>
-              <p>Nombre de bus actifs : ${ligne.busActifs}</p>
-              <h3>Arrêts :</h3>
-              <ul>
-                  ${ligne.arrets.map((arret) => `<li><a href="${arret.lien}" target="_blank">${arret.nom}</a></li>`).join('')}
-              </ul>
-              <button id="closeOverlay">Fermer</button>
-          </div>
-      `;
-
-      document.body.appendChild(overlay);
-
-      // Écouteur d'événements pour fermer l'overlay
-      document.getElementById('closeOverlay').addEventListener('click', () => {
-          document.body.removeChild(overlay);
-      }
-    );
-  }
-}
-
   const results = lignesDeTransport.filter((ligne) => 
     ligne.nom && ligne.nom.toLowerCase().includes(query) // Vérifie si le nom de la ligne correspond à la recherche
   );
@@ -556,6 +574,7 @@ function afficherDetailsLigne(id) {
       const ligneResultat = document.createElement('p');
       ligneResultat.textContent = ligne.nom; // Ajoute le nom de la ligne dans la liste
       ligneResultat.classList.add('search__result'); // Ajoute une classe pour le style si besoin
+      ligneResultat.id = ligne.id; // Ajoute l'id de la ligne comme attribut id
 
       // Ajout du résultat à la liste
       try {
@@ -566,7 +585,16 @@ function afficherDetailsLigne(id) {
       
       // Écouteur d'événements pour afficher les détails de la ligne
       ligneResultat.addEventListener('click', () => {
-        afficherDetailsLigne(ligne.id);
+        // Ouvrir la page lines.html
+        //window.location.href = 'lines.html';
+
+        const idLigne = ligneResultat.id;
+        console.log(idLigne);
+
+        // Appel de la function trouverElementDuTableau
+        trouverElementDuTableau(idLigne);
+        
+        //afficherDetailsLigne(ligne.id);
       });
     });
   } else {
@@ -584,75 +612,80 @@ main.addEventListener('click', () => {
   listRecherche.style.display = listRecherche.style.display === 'none' ? 'flex' : 'none';
 });
 
+// Fonction pour trouver un element dans le tableau
+function trouverElementDuTableau(idLigne) {
+  const detailsLineContainer = document.querySelector('.details__line');
+  const detailsContainer = document.querySelector('.lines__details--container');
+  // Trouver la ligne correspondante dans le tableau lignesDeTransport
+  const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
+
+  if (ligne) {
+      // Vérifie si la div details__line est déjà visible
+      if (detailsLineContainer.style.display === 'block') {
+          // Réinitialiser la div details__line
+          detailsLineContainer.innerHTML = '';
+      } else {
+          detailsContainer.style.display = 'none'; // Cacher le conteneur des détails de la ligne
+          detailsLineContainer.style.display = 'block'; // Rendre visible
+      }
+
+      // Créer et ajouter les éléments pour les détails de la ligne
+      const idElement = document.createElement('p');
+      idElement.textContent = `ID : ${ligne.id}`;
+
+      const nomElement = document.createElement('p');
+      nomElement.textContent = `Nom : ${ligne.nom}`;
+
+      const distanceElement = document.createElement('p');
+      distanceElement.textContent = `Distance : ${ligne.distance}`;
+
+      const arretsTitre = document.createElement('h3');
+      arretsTitre.textContent = 'Arrêts :';
+
+      const arretsList = document.createElement('ul');
+      ligne.arrets.forEach((arret) => {
+          const arretItem = document.createElement('li');
+          arretItem.textContent = arret.nom;
+          arretsList.appendChild(arretItem);
+      });
+
+      // Créer un bouton pour fermer
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Fermer';
+      closeButton.addEventListener('click', () => {
+          // Réinitialiser la div details__line
+          detailsLineContainer.innerHTML = '';
+          detailsLineContainer.style.display = 'none'; // Cacher la div details__line
+          detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
+      });
+
+      // Ajouter les éléments à la div details__line
+      detailsLineContainer.appendChild(idElement);
+      detailsLineContainer.appendChild(nomElement);
+      detailsLineContainer.appendChild(distanceElement);
+      detailsLineContainer.appendChild(arretsTitre);
+      detailsLineContainer.appendChild(arretsList);
+      detailsLineContainer.appendChild(closeButton);
+  }
+}
+
 // Fonction pour afficher les détails d'une ligne
 function afficherDetailsLigneDepuisListe() {
   const containersLignes = document.querySelectorAll('.lines__list--container li');
-  const detailsLineContainer = document.querySelector('.details__line');
-  const detailsContainer = document.querySelector('.lines__details--container');
 
   containersLignes.forEach(container => {
       container.addEventListener('click', function() {
           // Récupérer l'ID à partir du texte contenu dans le premier paragraphe
           const idLigne = container.firstChild.textContent;
-          console.log(idLigne);
 
-          // Trouver la ligne correspondante dans le tableau lignesDeTransport
-          const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
-
-          if (ligne) {
-              // Vérifie si la div details__line est déjà visible
-              if (detailsLineContainer.style.display === 'block') {
-                  // Réinitialiser la div details__line
-                  detailsLineContainer.innerHTML = '';
-              } else {
-                  detailsContainer.style.display = 'none'; // Cacher le conteneur des détails de la ligne
-                  detailsLineContainer.style.display = 'block'; // Rendre visible
-              }
-
-              // Créer et ajouter les éléments pour les détails de la ligne
-              const idElement = document.createElement('p');
-              idElement.textContent = `ID : ${ligne.id}`;
-
-              const nomElement = document.createElement('p');
-              nomElement.textContent = `Nom : ${ligne.nom}`;
-
-              const distanceElement = document.createElement('p');
-              distanceElement.textContent = `Distance : ${ligne.distance}`;
-
-              const arretsTitre = document.createElement('h3');
-              arretsTitre.textContent = 'Arrêts :';
-
-              const arretsList = document.createElement('ul');
-              ligne.arrets.forEach((arret) => {
-                  const arretItem = document.createElement('li');
-                  arretItem.textContent = arret.nom;
-                  arretsList.appendChild(arretItem);
-              });
-
-              // Créer un bouton pour fermer
-              const closeButton = document.createElement('button');
-              closeButton.textContent = 'Fermer';
-              closeButton.addEventListener('click', () => {
-                  // Réinitialiser la div details__line
-                  detailsLineContainer.innerHTML = '';
-                  detailsLineContainer.style.display = 'none'; // Cacher la div details__line
-                  detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
-              });
-
-              // Ajouter les éléments à la div details__line
-              detailsLineContainer.appendChild(idElement);
-              detailsLineContainer.appendChild(nomElement);
-              detailsLineContainer.appendChild(distanceElement);
-              detailsLineContainer.appendChild(arretsTitre);
-              detailsLineContainer.appendChild(arretsList);
-              detailsLineContainer.appendChild(closeButton);
-          }
+          trouverElementDuTableau(idLigne);
       });
   });
 }
 // Appeler la fonction pour activer l'écoute des clics
 afficherDetailsLigneDepuisListe();
 
+// Ecouter d'evenement pour le formulaire de recherche
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
