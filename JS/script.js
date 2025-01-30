@@ -586,18 +586,18 @@ main.addEventListener('click', () => {
 
 // Fonction pour afficher les détails d'une ligne
 function afficherDetailsLigneDepuisListe() {
-  const containersLignes = document.querySelectorAll('.lines__list--container');
+  const containersLignes = document.querySelectorAll('.lines__list--container li');
   const detailsLineContainer = document.querySelector('.details__line');
   const detailsContainer = document.querySelector('.lines__details--container');
 
   containersLignes.forEach(container => {
       container.addEventListener('click', function() {
           // Récupérer l'ID à partir du texte contenu dans le premier paragraphe
-          const nomLigne = container.querySelector('li').lastChild.textContent;
+          const idLigne = container.firstChild.textContent;
+          console.log(idLigne);
 
           // Trouver la ligne correspondante dans le tableau lignesDeTransport
-          const ligne = lignesDeTransport.find((ligne) => ligne.nom === nomLigne);
-          console.log(ligne);
+          const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
 
           if (ligne) {
               // Vérifie si la div details__line est déjà visible
