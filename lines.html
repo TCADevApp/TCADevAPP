@@ -10,7 +10,8 @@
 <body>
   <header class="header">
     <div class="header__logo">TCA</div>  
-    <form class="header__search">
+    <div class="header__search--area">
+      <form class="header__search">
         <input type="text" placeholder="Rechercher...">
         <button type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" 
@@ -19,7 +20,10 @@
             1.37t-1.37 3.36t1.37 3.36t3.36 1.37"/>
         </svg>
         </button>
-    </form>
+      </form>
+      <div class="search__list">
+      </div>
+    </div>
     <div class="header__burger">☰</div> 
     <nav class="header__menu">
         <a href="lines.html" alt="Lignes">
@@ -31,8 +35,9 @@
         <a href="about.html" alt="À propos">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>
         </a>
+        <button class="sign__in">S'inscrire</button>
     </nav>
-  </header>
+</header>
 
   <main class="main__lines">
     <section class="lines__welcome">

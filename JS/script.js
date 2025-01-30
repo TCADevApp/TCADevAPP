@@ -478,64 +478,24 @@ for (let i = 0; i < lignesDeTransport.length; i++) {
 // Affichage des lignes sur la home__page
 const homeLineList = document.querySelector('.home__lines--list');
 
+for (let i = 0; i < 4 ; i++) {
   //Ligne 1
   const ligne1Id = document.createElement('p');
-  ligne1Id.textContent = lignesDeTransport[0].id;
+  ligne1Id.textContent = lignesDeTransport[i].id;
   const ligne1Nom = document.createElement('p');
-  ligne1Nom.textContent = lignesDeTransport[0].nom;
+  ligne1Nom.textContent = lignesDeTransport[i].nom;
   const ligne1Distance = document.createElement('p');
-  ligne1Distance.textContent = lignesDeTransport[0].distance;
+  ligne1Distance.textContent = lignesDeTransport[i].distance;
 
   const ligne1 = document.createElement('div');
   ligne1.appendChild(ligne1Id);
   ligne1.appendChild(ligne1Nom);
   ligne1.appendChild(ligne1Distance);
-
-  //lignes 2
-  const ligne2Id = document.createElement('p');
-  ligne2Id.textContent = lignesDeTransport[1].id;
-  const ligne2Nom = document.createElement('p');
-  ligne2Nom.textContent = lignesDeTransport[1].nom;
-  const ligne2Distance = document.createElement('p');
-  ligne2Distance.textContent = lignesDeTransport[1].distance;
-
-  const ligne2 = document.createElement('div');
-  ligne2.appendChild(ligne2Id);
-  ligne2.appendChild(ligne2Nom);
-  ligne2.appendChild(ligne2Distance);
-
-  // Ligne 3
-  const ligne3Id = document.createElement('p');
-  ligne3Id.textContent = lignesDeTransport[2].id;
-  const ligne3Nom = document.createElement('p');
-  ligne3Nom.textContent = lignesDeTransport[2].nom;
-  const ligne3Distance = document.createElement('p');
-  ligne3Distance.textContent = lignesDeTransport[2].distance;
-
-  const ligne3 = document.createElement('div');
-  ligne3.appendChild(ligne3Id);
-  ligne3.appendChild(ligne3Nom);
-  ligne3.appendChild(ligne3Distance);
-
-  // Ligne 4
-  const ligne4Id = document.createElement('p');
-  ligne4Id.textContent = lignesDeTransport[3].id;
-  const ligne4Nom = document.createElement('p');
-  ligne4Nom.textContent = lignesDeTransport[3].nom;
-  const ligne4Distance = document.createElement('p');
-  ligne4Distance.textContent = lignesDeTransport[3].distance;
-
-  const ligne4 = document.createElement('div');
-  ligne4.appendChild(ligne4Id);
-  ligne4.appendChild(ligne4Nom);
-  ligne4.appendChild(ligne4Distance);
-
+  
 try {
   homeLineList.appendChild(ligne1);
-  homeLineList.appendChild(ligne2);
-  homeLineList.appendChild(ligne3);
-  homeLineList.appendChild(ligne4);
 } catch (error) {}
+}
 
 // Gestion de la recherche
 const searchForm = document.querySelector('.header__search');
@@ -551,6 +511,45 @@ searchInput.addEventListener('input', () => {
     listRecherche.style.display = 'none'; // Cache la liste si aucun texte n'est saisi
     return;
   }
+
+  // Fonction pour afficher les détails d'une ligne
+function afficherDetailsLigne(id) {
+  const ligne = lignesDeTransport.find((ligne) => ligne.id === id);
+  
+  if (ligne) {
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = '100%';
+      overlay.style.height = '100%';
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      overlay.style.color = '#fff';
+      overlay.style.padding = '20px';
+      overlay.style.zIndex = 1000;
+
+      overlay.innerHTML = `
+          <div>
+              <h2>${ligne.nom}</h2>
+              <p>Distance : ${ligne.distance}</p>
+              <p>Nombre de bus actifs : ${ligne.busActifs}</p>
+              <h3>Arrêts :</h3>
+              <ul>
+                  ${ligne.arrets.map((arret) => `<li><a href="${arret.lien}" target="_blank">${arret.nom}</a></li>`).join('')}
+              </ul>
+              <button id="closeOverlay">Fermer</button>
+          </div>
+      `;
+
+      document.body.appendChild(overlay);
+
+      // Écouteur d'événements pour fermer l'overlay
+      document.getElementById('closeOverlay').addEventListener('click', () => {
+          document.body.removeChild(overlay);
+      }
+    );
+  }
+}
 
   const results = lignesDeTransport.filter((ligne) => 
     ligne.nom && ligne.nom.toLowerCase().includes(query) // Vérifie si le nom de la ligne correspond à la recherche
@@ -570,6 +569,11 @@ searchInput.addEventListener('input', () => {
       } catch (error) {
         console.error('Erreur lors de l’ajout du résultat :', error);
       }
+      
+      // Écouteur d'événements pour afficher les détails de la ligne
+      ligneResultat.addEventListener('click', () => {
+        afficherDetailsLigne(ligne.id);
+      });
     });
   } else {
     // Si aucun résultat, on affiche un message
@@ -580,12 +584,10 @@ searchInput.addEventListener('input', () => {
   }
 });
 
-const hideListSearch = document.querySelector('main');
-hideListSearch.addEventListener('click', () => {
+const main = document.querySelector('main')
+main.addEventListener('click', () => {
   listRecherche.style.display = listRecherche.style.display === 'none' ? 'flex' : 'none';
-  }
-);
-
+});
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -602,59 +604,16 @@ searchForm.addEventListener('submit', (e) => {
 });
 
 // Formulaire de souscription
-    document.getElementById('subscribeForm').addEventListener('submit', function(e) 
-    {
-        e.preventDefault(); // Empêche le rechargement
+document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Empêche le rechargement de la page
 
-        const name = e.target.name.value;
-        const email = e.target.email.value;
+  const name = e.target.name.value.trim(); // Récupère et nettoie le nom
+  const email = e.target.email.value.trim(); // Récupère et nettoie l'email
 
-        if (name && email) {
-        alert(`Merci ${name}, vous êtes inscrit avec l'email ${email} !`);
-        e.target.reset();
-        } else {
-        alert('Veuillez remplir tous les champs.');
-        }
-    });
-  
-// Fonction pour afficher les détails d'une ligne
-  function afficherDetailsLigne(id) 
-  {
-    const ligne = lignesDeTransport.find((ligne) => ligne.id === id);
-    if (ligne) {
-      const overlay = document.createElement('div');
-      overlay.innerHTML = `
-        <div>
-          <h2>${ligne.nom}</h2>
-          <p>Distance : ${ligne.distance}</p>
-          <p>Nombre de bus actifs : ${ligne.busActifs}</p>
-          <h3>Arrêts :</h3>
-          <ul>
-            ${ligne.arrets.map((arret) => `<li><a href="${arret.lien}" target="_blank">${arret.nom}</a></li>`).join('')}
-          </ul>
-        </div>
-      `;
-      document.body.appendChild(overlay);
-    }
-
-    // Fonction pour afficher les détails d'une ligne
-    function afficherDetailsLigne(id) {
-    const ligne = lignesDeTransport.find((ligne) => ligne.id === id);
-    if (ligne) 
-        {
-            const overlay = document.createElement('div');
-            overlay.innerHTML = `
-            <div>
-                <h2>${ligne.nom}</h2>
-                <p>Distance : ${ligne.distance}</p>
-                <p>Nombre de bus actifs : ${ligne.busActifs}</p>
-                <h3>Arrêts :</h3>
-                <ul>
-                ${ligne.arrets.map((arret) => `<li><a href="${arret.lien}" target="_blank">${arret.nom}</a></li>`).join('')}
-                </ul>
-            </div>
-            `;
-            document.body.appendChild(overlay);
-        }
-    }
+  if (name && email) {
+      alert(`Merci ${name}, vous êtes inscrit avec l'email ${email} !`);
+      e.target.reset(); // Réinitialise le formulaire
+  } else {
+      alert('Veuillez remplir tous les champs.');
   }
+});
