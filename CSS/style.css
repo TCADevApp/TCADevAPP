@@ -142,19 +142,6 @@
   }
   
   /* CONTENU DE LA PAGE D'ACCUEILLE */
-  .main__title {
-    font-size: 2rem;
-    color: var(--red);
-    text-align: center;
-  }
-
-  .main__text {
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.8;
-    text-align: justify;
-  }
-
   .home__welcome {
     display: flex;
     justify-content: center;
@@ -287,16 +274,16 @@
     display: none;
   }
   
-  /*CONTENUE DE LA PAGE LIGNES LIST*/
+/*CONTENUE DE LA PAGE LIGNES LIST*/
   .lines__page{
     background-color: var(--blue);
-    display: flex;
+    width: 100%;
     justify-content: space-between;
     padding: 0 2rem; 
     display: none;
   }
 
-  .lines__page section{
+  .lines__page--container{
     background-color: var(--white);    
     height: 600px;
   }
@@ -346,13 +333,28 @@
   }
 
   .details__line{
-    background-color: #cfcfcf;
     width: 100%;
     height: 100%;
-    padding: 1rem;
-    
-
     display: none;
+    background-color: #d62828;
+  }
+
+  .details__line--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 90%;
+    background-color: aqua;
+  }
+
+  .details__line--map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 90%;
+    background-color:cadetblue;
   }
 
   .details__line button{
@@ -366,6 +368,18 @@
     height: 30px;
   }
   
+/* CONTENUE DE LA PAGE CONTACT*/
+  .contact__page{
+    width: 100%;
+    display: none;
+  }
+
+/* CONTENUE DE LA PAGE ABOUT*/
+  .about__page{
+    width: 100%;
+    display: none;
+  }
+
   /* RESPONSIVITÉ */
   @media (max-width: 768px) {
     .header__search {
