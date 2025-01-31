@@ -9,8 +9,76 @@ burger.addEventListener('click', () => {
 // Gestion du logo pour retour à l'accueil
 const logo = document.querySelector('.header__logo');
 
+// Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
+function sectionHomeShow() {
+  const linesPage = document.querySelector('.lines__page');
+  const homePage = document.querySelector('.home__page');
+  const contactPage = document.querySelector('.contact__page');
+  const aboutpage = document.querySelector('.about__page');
+
+  linesPage.style.display = 'none';
+  homePage.style.display = 'block';
+  contactPage.style.display = 'none';
+  aboutpage.style.display = 'none';
+};
 logo.addEventListener('click', () => {
-  window.location.href = 'index.html';
+  sectionHomeShow();
+});
+
+// Gestion du bouton pour afficher la page des lignes
+const linesButton = document.querySelector('.menu__lignes--btn');
+
+// Fonction  sectionLinesShow pour afficher la section lines__page et fermer les autres sections
+function sectionLinesShow() {
+  const linesPage = document.querySelector('.lines__page');
+  const homePage = document.querySelector('.home__page');
+  const contactPage = document.querySelector('.contact__page');
+  const aboutpage = document.querySelector('.about__page');
+
+  linesPage.style.display = 'block';
+  homePage.style.display = 'none';
+  contactPage.style.display = 'none';
+  aboutpage.style.display = 'none';
+};
+linesButton.addEventListener('click', () => {
+  sectionLinesShow();
+});
+
+// Gestion du bouton pour afficher la page de contact
+const contactButton = document.querySelector('.menu__contact--btn');
+// Fonction  sectionContactShow pour afficher la section contact__page et fermer les autres sections
+function sectionContactShow() {
+  const linesPage = document.querySelector('.lines__page');
+  const homePage = document.querySelector('.home__page');
+  const contactPage = document.querySelector('.contact__page');
+  const aboutpage = document.querySelector('.about__page');
+
+  linesPage.style.display = 'none';
+  homePage.style.display = 'none';
+  contactPage.style.display = 'block';
+  aboutpage.style.display = 'none';
+};
+contactButton.addEventListener('click', () => {
+  sectionContactShow();
+});
+
+// Gestion du bouton pour afficher la page à propos
+const aboutButton = document.querySelector('.menu__about--btn');
+
+// Fonction  sectionAboutShow pour afficher la section about__page et fermer les autres sections
+function sectionAboutShow() {
+  const linesPage = document.querySelector('.lines__page');
+  const homePage = document.querySelector('.home__page');
+  const contactPage = document.querySelector('.contact__page');
+  const aboutpage = document.querySelector('.about__page');
+
+  linesPage.style.display = 'none';
+  homePage.style.display = 'none';
+  contactPage.style.display = 'none';
+  aboutpage.style.display = 'block';
+};
+aboutButton.addEventListener('click', () => {
+  sectionAboutShow();
 });
 
 // Base de données des lignes de transport
@@ -585,8 +653,9 @@ searchInput.addEventListener('input', () => {
       
       // Écouteur d'événements pour afficher les détails de la ligne
       ligneResultat.addEventListener('click', () => {
-        // Ouvrir la page lines.html
-        //window.location.href = 'lines.html';
+
+        // Appel de la fonction sectionLinesShow
+        
 
         const idLigne = ligneResultat.id;
         console.log(idLigne);
@@ -691,13 +760,23 @@ searchForm.addEventListener('submit', (e) => {
 
   const query = searchInput.value.toLowerCase().trim();
 
-  // Logique de recherche
-  if (query.includes('ligne')) {
-    window.location.href = 'lines.html';
-  } else if (query.includes('arrêt')) {
-    alert('Page des arrêts à développer.');
+  // Vérifier si la recherche est vide
+  if (query.length === 0) {
+      alert('Veuillez saisir un texte pour effectuer une recherche.');
+      return;
+  }
+
+  /* Vérifier si la recherche correspond à une ligne dans la base 
+  de données si oui appeler la fonction sectionLinesShow() et appeler 
+  la fonction trouverElementTableau() pour afficher les détails de la 
+  ligne recherchée */
+  const ligne = lignesDeTransport.find((ligne) => ligne.nom.toLowerCase().includes(query));
+
+  if (ligne) {
+      sectionLinesShow();
+      trouverElementDuTableau(ligne.id);
   } else {
-    alert('Aucune correspondance trouvée.');
+      alert('Aucun résultat trouvé.');
   }
 });
 

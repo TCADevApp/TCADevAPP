@@ -51,7 +51,7 @@
     height: 40px;
   }
   
-  .header__menu a, .sign__in {
+  .menu__container, .sign__in {
     color: var(--white);
     width: 25%;
     height: 95%;    
@@ -59,17 +59,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     text-align: center;
   }
 
-  .header__menu a svg {
+  .menu__container svg {
     width: 70%;
     height: 70%;
   }
   
-  .header__menu a:hover, .sign__in:hover {
+  .menu__container:hover, .sign__in:hover {
     background-color: var(--yellow);
+  }
+
+  .menu__container{
+    background-color: var(--blue);
+    border: none;
   }
 
   .sign__in{
@@ -284,14 +288,15 @@
   }
   
   /*CONTENUE DE LA PAGE LIGNES LIST*/
-  .main__lines{
+  .lines__page{
     background-color: var(--blue);
     display: flex;
     justify-content: space-between;
     padding: 0 2rem; 
+    display: none;
   }
 
-  .main__lines section{
+  .lines__page section{
     background-color: var(--white);    
     height: 600px;
   }
