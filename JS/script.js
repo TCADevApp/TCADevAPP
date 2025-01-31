@@ -655,8 +655,8 @@ searchInput.addEventListener('input', () => {
       ligneResultat.addEventListener('click', () => {
 
         // Appel de la fonction sectionLinesShow
+        sectionLinesShow();
         
-
         const idLigne = ligneResultat.id;
         console.log(idLigne);
 
