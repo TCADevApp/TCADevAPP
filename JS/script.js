@@ -119,6 +119,7 @@
       nom: "Commerce - Kingasani",
       distance: "18 km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Commerce", lien: "" },
         { nom: "Kingasani", lien: "" },
@@ -129,6 +130,7 @@
       nom: "Royal - Masina Sans Fil",
       distance: "12 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Royal", lien: "" },
         { nom: "Masina Sans Fil", lien: "" },
@@ -139,6 +141,7 @@
       nom: "Gare Central - Ngiri Ngiri",
       distance: "15 Km",
       busActifs: "Bus Actif 03",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Gare Central", lien: "" },
         { nom: "Ngiri Ngiri", lien: "" },
@@ -149,6 +152,7 @@
       nom: "UPN - Gare Central",
       distance: "12 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Gare Central", lien: "" },
@@ -159,6 +163,7 @@
       nom: "Ngiri-Ngiri - Gare Centrale",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Ngiri-Ngiri", lien: "" },
         { nom: "Gare Centrale", lien: "" },
@@ -169,6 +174,7 @@
       nom: "Petro Congo - Zando",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Petro Congo", lien: "" },
         { nom: "Zando", lien: "" },
@@ -179,6 +185,7 @@
       nom: "HRGK (Mama Yemo) - Mbudi",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "HRGK (Mama Yemo)", lien: "" },
         { nom: "Mbudi", lien: "" },
@@ -189,6 +196,7 @@
       nom: "Intendance - Zando",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Intendance", lien: "" },
         { nom: "Zando", lien: "" },
@@ -199,6 +207,7 @@
       nom: "UPN - Victoire",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Victoire", lien: "" },
@@ -209,6 +218,7 @@
       nom: "Gare Centrale - UPN",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Gare Centrale", lien: "" },
         { nom: "UPN", lien: "" },
@@ -219,6 +229,7 @@
       nom: "Debon-Homme - Kinkole",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Debon-Homme", lien: "" },
         { nom: "Kinkole", lien: "" },
@@ -229,6 +240,7 @@
       nom: "UPN - Matete (Marché)",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Matete (Marché)", lien: "" },
@@ -239,6 +251,7 @@
       nom: "Victoire - UPN",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Victoire", lien: "" },
         { nom: "UPN", lien: "" },
@@ -249,6 +262,7 @@
       nom: "Selembao - Zando",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Selembao", lien: "" },
         { nom: "Zando", lien: "" },
@@ -259,6 +273,7 @@
       nom: "UPN - Mitendi",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Mitendi", lien: "" },
@@ -269,6 +284,7 @@
       nom: "Mbudi - HRGK (Mama Yemo)",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Mbudi", lien: "" },
         { nom: "HRGK (Mama Yemo)", lien: "" },
@@ -279,6 +295,7 @@
       nom: "UPN - Campus Trafic",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Campus Trafic", lien: "" },
@@ -289,6 +306,7 @@
       nom: "Zando - Matete (Marché)",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Zando", lien: "" },
         { nom: "Matete (Marché)", lien: "" },
@@ -299,6 +317,7 @@
       nom: "Gare Centrale - Ngiri-Ngiri",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Gare Centrale", lien: "" },
         { nom: "Ngiri-Ngiri", lien: "" },
@@ -309,6 +328,7 @@
       nom: "Rond Point Ngaba - Place des évolués",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Rond Point Ngaba", lien: "" },
         { nom: "Place des évolués", lien: "" },
@@ -319,6 +339,7 @@
       nom: "Bandal Tshibangu - Onatra",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Bandal Tshibangu", lien: "" },
         { nom: "Onatra", lien: "" },
@@ -329,6 +350,7 @@
       nom: "Zando - Kimbanseke (Cimetière)",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Zando", lien: "" },
         { nom: "Kimbanseke (Cimetière)", lien: "" },
@@ -339,6 +361,7 @@
       nom: "Fonction Publique - Pascal",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Fonction Publique", lien: "" },
         { nom: "Pascal", lien: "" },
@@ -349,6 +372,7 @@
       nom: "Gambela - Mbudi",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Gambela", lien: "" },
         { nom: "Mbudi", lien: "" },
@@ -359,6 +383,7 @@
       nom: "Kinsuka - Gare Centrale",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Gare Centrale", lien: "" },
@@ -369,6 +394,7 @@
       nom: "Matete - Gare Centrale",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Matete", lien: "" },
         { nom: "Gare Centrale", lien: "" },
@@ -379,6 +405,7 @@
       nom: "UPN - Kinsuka",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Kinsuka", lien: "" },
@@ -389,6 +416,7 @@
       nom: "Kinkole - Gare Centrale",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinkole", lien: "" },
         { nom: "Gare Centrale", lien: "" },
@@ -399,6 +427,7 @@
       nom: "Ngiri-Ngiri - Kinsuka",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Ngiri-Ngiri", lien: "" },
         { nom: "Kinsuka", lien: "" },
@@ -409,6 +438,7 @@
       nom: "Matete - Kinsuka",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Matete", lien: "" },
         { nom: "Kinsuka", lien: "" },
@@ -419,6 +449,7 @@
       nom: "Zando - Kinsuka",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Zando", lien: "" },
         { nom: "Kinsuka", lien: "" },
@@ -429,6 +460,7 @@
       nom: "UPN - Zando",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "UPN", lien: "" },
         { nom: "Zando", lien: "" },
@@ -439,6 +471,7 @@
       nom: "Kinsuka - UPN",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "UPN", lien: "" },
@@ -449,6 +482,7 @@
       nom: "Kinsuka - Matete",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Matete", lien: "" },
@@ -459,6 +493,7 @@
       nom: "Kinsuka - Ngiri-Ngiri",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Ngiri-Ngiri", lien: "" },
@@ -469,6 +504,7 @@
       nom: "Kinsuka - Bandal",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Bandal", lien: "" },
@@ -479,6 +515,7 @@
       nom: "Kinsuka - Debon-Homme",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Debon-Homme", lien: "" },
@@ -489,6 +526,7 @@
       nom: "Kinsuka - HRGK",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "HRGK", lien: "" },
@@ -499,6 +537,7 @@
       nom: "Kinsuka - Victoire",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Victoire", lien: "" },
@@ -509,6 +548,7 @@
       nom: "Kinsuka - Intendance",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Intendance", lien: "" },
@@ -519,6 +559,7 @@
       nom: "Kinsuka - Petro Congo",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Petro Congo", lien: "" },
@@ -529,6 +570,7 @@
       nom: "Kinsuka - Selembao",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Selembao", lien: "" },
@@ -539,6 +581,7 @@
       nom: "Kinsuka - Mitendi",
       distance: "5 Km",
       busActifs: "Bus Actif 05",
+      lienMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0000000000005!2d15.31300031475368!3d-4.331999996982073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3b3b3b3b3b3b%3A0x1a6a3b3b3b3b3b3b!2sKingasani%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1629780000000!5m2!1sfr!2scd",
       arrets: [
         { nom: "Kinsuka", lien: "" },
         { nom: "Mitendi", lien: "" },
@@ -594,6 +637,8 @@
     const detailsLine = document.querySelector('.details__line')
     const detailsLineContainer = document.querySelector('.details__line--container');
     const detailsContainer = document.querySelector('.lines__details--container');
+    const detailsMapContainer = document.querySelector('.details__line--map');
+
     // Trouver la ligne correspondante dans le tableau lignesDeTransport
     const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
 
@@ -633,6 +678,8 @@
         closeButton.addEventListener('click', () => {
             // Réinitialiser la div details__line--container
             detailsLineContainer.innerHTML = '';
+            detailsMapContainer.innerHTML = '';
+
             detailsLine.style.display = 'none'; // Cacher la div details__line--container
             detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
         });
@@ -644,7 +691,27 @@
         detailsLineContainer.appendChild(arretsTitre);
         detailsLineContainer.appendChild(arretsList);
         detailsLineContainer.appendChild(closeButton);
-    }
+
+        // Appeler la fonction pour afficher la carte Google Maps
+        afficherCarte(ligne.lienMaps);
+      }
+      // Fonction pour afficher la carte Google Maps
+        function afficherCarte(lienMaps) {
+          const detailsMapContainer = document.querySelector('.details__line--map');
+          detailsMapContainer.innerHTML = ''; // Réinitialiser le contenu de la carte
+
+          // Créer un iframe pour Google Maps
+          const mapIframe = document.createElement('iframe');
+          mapIframe.src = lienMaps; // Utiliser le lien de Google Maps
+          mapIframe.allowFullscreen = true; // Autoriser le mode plein écran
+          mapIframe.loading = 'lazy'; // Chargement paresseux
+
+          // Ajouter l'iframe à la div details__line--map
+          detailsMapContainer.appendChild(mapIframe);
+        }
+
+      // Appeler la fonction pour activer l'écoute des clics
+      afficherDetailsLigneDepuisListe();
   }
 
 // Gestion de la recherche
