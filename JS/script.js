@@ -20,13 +20,19 @@
       homePage.style.display = 'block';
       contactPage.style.display = 'none';
       aboutpage.style.display = 'none';
+
+      if (homePage.style.display === 'block') {
+        linesButton.style.backgroundColor = '#0056b3';
+        contactButton.style.backgroundColor = '#0056b3';
+        aboutButton.style.backgroundColor = '#0056b3';
+      }
     };
     logo.addEventListener('click', () => {
       sectionHomeShow();
     });
 
 // Gestion du bouton pour afficher la page des lignes
-  const linesButton = document.querySelector('.menu__lignes--btn');
+  const linesButton = document.querySelector('.menu__lines--btn');
   const showPlusLines = document.querySelector('.show__plus--lines');
 
   // Fonction  sectionLinesShow pour afficher la section lines__page et fermer les autres sections
@@ -40,6 +46,13 @@
     homePage.style.display = 'none';
     contactPage.style.display = 'none';
     aboutpage.style.display = 'none';
+
+    if (linesPage.style.display === 'flex') {
+      linesButton.style.backgroundColor = '#d62828';
+
+      contactButton.style.backgroundColor = '#0056b3';
+      aboutButton.style.backgroundColor = '#0056b3';
+    }
   };
   linesButton.addEventListener('click', () => {
     sectionLinesShow();
@@ -61,6 +74,13 @@
     homePage.style.display = 'none';
     contactPage.style.display = 'block';
     aboutpage.style.display = 'none';
+
+    if (contactPage.style.display === 'block') {
+      contactButton.style.backgroundColor = '#d62828';
+
+      linesButton.style.backgroundColor = '#0056b3';
+      aboutButton.style.backgroundColor = '#0056b3';
+    }
   };
   contactButton.addEventListener('click', () => {
     sectionContactShow();
@@ -74,12 +94,19 @@
     const linesPage = document.querySelector('.lines__page');
     const homePage = document.querySelector('.home__page');
     const contactPage = document.querySelector('.contact__page');
-    const aboutpage = document.querySelector('.about__page');
+    const aboutPage = document.querySelector('.about__page');
 
     linesPage.style.display = 'none';
     homePage.style.display = 'none';
     contactPage.style.display = 'none';
-    aboutpage.style.display = 'block';
+    aboutPage.style.display = 'block';
+
+    if (aboutPage.style.display === 'block') {
+      aboutButton.style.backgroundColor = '#d62828';
+
+      contactButton.style.backgroundColor = '#0056b3';
+      linesButton.style.backgroundColor = '#0056b3';
+    }
   };
   aboutButton.addEventListener('click', () => {
     sectionAboutShow();
