@@ -197,20 +197,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 300px;
   }
 
-  .home__lines--image {
-    width: 25%;
-    height: 80%;
+  .home__lines--div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
     border-radius: 10px;
-    padding: auto;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .home__lines--image {
+    width: 30%;
+    height: 200px;
+    border-radius: 10px;
   }
 
   .home__lines--container {
     width: 50%;
-    height: 80%;
     gap: 1rem;
     text-align: center;
   }
@@ -218,22 +228,22 @@
   .home__lines--list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    font-size: 0.7rem;
   }
 
   .home__lines--list div{
-    width: 45%;
+    width: 50%;
     height: 45%;
-    padding: 10px;
+    gap: 1rem;
     border-radius: 20px;
   }
 
-  .home__lines a{
+  .home__lines--div a{
     align-self: flex-end;
     text-decoration: none;
-    color: var(--blue);
+    color: var(--white);
   }
 
   .home__info{
@@ -259,7 +269,7 @@
   }
 
   .info--containerD{
-    background-color: gray;
+    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,6 +282,46 @@
 
   .home__info--inscription{
     display: none;
+  }
+
+  .home__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 300px;
+  }
+
+  .home__container--text{
+    width: 600px;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .home__container--text div{
+    gap: 1rem;
+    width: 70%;
+  }
+
+  .home__container--text div h3{
+    font-size: 1.5rem;
+  }
+
+  .home__container--text div p{
+    font-size: 0.7rem;
+    text-align: justify;
+  }
+
+  .home__container--img{
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
   }
   
 /*CONTENUE DE LA PAGE LIGNES LIST*/
