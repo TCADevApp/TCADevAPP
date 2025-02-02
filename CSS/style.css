@@ -197,7 +197,7 @@
     width: 600px;
     height: 80%;
     border-radius: 10px;
-    background-image: url(../IMG/Transco_1.png);
+    background-image: url(../images/Transco_1.png);
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -498,7 +498,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../IMG/Transco_3.jpeg);
+    background-image: url(../images/Transco_3.jpeg);
     background-size: cover;
     background-position: center;
     
