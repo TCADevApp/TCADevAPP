@@ -72,10 +72,10 @@
 
     linesPage.style.display = 'none';
     homePage.style.display = 'none';
-    contactPage.style.display = 'block';
+    contactPage.style.display = 'flex';
     aboutpage.style.display = 'none';
 
-    if (contactPage.style.display === 'block') {
+    if (contactPage.style.display === 'flex') {
       contactButton.style.backgroundColor = '#d62828';
 
       linesButton.style.backgroundColor = '#0056b3';
@@ -99,9 +99,9 @@
     linesPage.style.display = 'none';
     homePage.style.display = 'none';
     contactPage.style.display = 'none';
-    aboutPage.style.display = 'block';
+    aboutPage.style.display = 'flex';
 
-    if (aboutPage.style.display === 'block') {
+    if (aboutPage.style.display === 'flex') {
       aboutButton.style.backgroundColor = '#d62828';
 
       contactButton.style.backgroundColor = '#0056b3';
@@ -672,9 +672,8 @@
             arretsList.appendChild(arretItem);
         });
 
-        // Créer un bouton pour fermer
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Fermer';
+        // Bouton pour fermer
+        const closeButton = document.querySelector('.close__btn');
         closeButton.addEventListener('click', () => {
             // Réinitialiser la div details__line--container
             detailsLineContainer.innerHTML = '';
@@ -690,7 +689,7 @@
         detailsLineContainer.appendChild(distanceElement);
         detailsLineContainer.appendChild(arretsTitre);
         detailsLineContainer.appendChild(arretsList);
-        detailsLineContainer.appendChild(closeButton);
+        //detailsLineContainer.appendChild(closeButton);
 
         // Appeler la fonction pour afficher la carte Google Maps
         afficherCarte(ligne.lienMaps);
@@ -751,7 +750,6 @@
         
         // Écouteur d'événements pour afficher les détails de la ligne
         ligneResultat.addEventListener('click', () => {
-
           // Appel de la fonction sectionLinesShow
           sectionLinesShow();
 
@@ -760,8 +758,6 @@
 
           // Appel de la function trouverElementDuTableau
           trouverElementDuTableau(idLigne);
-          
-          //afficherDetailsLigne(ligne.id);
         });
       });
     } else {
@@ -776,10 +772,11 @@
   // Écouteur d'événements pour afficher ou masquer la liste de recherche
   const main = document.querySelector('main')
   main.addEventListener('click', () => {
-    listRecherche.style.display = listRecherche.style.display === 'none' ? 'flex' : 'none';
+    if (listRecherche.style.display === 'flex') {
+      listRecherche.style.display = 'none';
+      searchInput.value = '';
+    }
   });
-
-  trouverElementDuTableau();
 
   // Fonction pour afficher les détails d'une ligne
   function afficherDetailsLigneDepuisListe() {

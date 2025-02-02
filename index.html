@@ -143,6 +143,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptate non, labore, dicta eligendi architecto necessitatibus sapiente, minima ex deserunt mollitia aperiam rerum sequi cum autem? Officia, laudantium obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iusto ut dolore ducimus autem non in quas magnam ipsa, earum consectetur quam perspiciatis facilis. Amet aliquid doloremque repudiandae dicta quis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cum, praesentium, aliquid consequatur natus voluptas placeat quas minima veritatis nesciunt esse asperiores ipsum atque. Enim voluptatem recusandae ex dolorum sit!</p>
         </div>
         <div class="details__line">
+          <button class="close__btn">Fermet</button>
           <div class="details__line--container">
           </div>
           <div class="details__line--map"></div>
@@ -151,13 +152,16 @@
     </section>
   
     <section class="contact__page">
-      <h2 class="contact__title">Nous sommes là pour vous aider</h2>
-        <form class="contact__form" id="contactForm">
-          <input type="text" name="name" placeholder="Votre nom" required>
-          <input type="email" name="email" placeholder="Votre adresse email" required>
-          <textarea name="message" placeholder="Votre message" required></textarea>
-          <button type="submit">Envoyer</button>
-        </form>
+      <!--<h2 class="contact__title">Nous sommes là pour vous aider</h2>-->
+      <form class="contact__form" id="contactForm">
+        <label for="name">Noms</label>
+        <input type="text" name="name" id="name" placeholder="Votre nom" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
 
     <section class="about__page">
@@ -179,7 +183,7 @@
 
     <section class="ads">
       <div>
-        <p>!!!</p>
+        <p>Publicite !!!</p>
       </div>
     </section>
   </main>
