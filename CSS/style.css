@@ -139,7 +139,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: auto;
+    padding: 1rem 0;
   }
 
   .footer__container{
@@ -481,6 +481,27 @@
   .about__page{
     width: 100%;
     display: none;
+  }
+
+/* CONTENUE DES PUBLICITES */
+  .ads{
+    background-color: var(--blue);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ads div{
+    width: 600px;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../IMG/Transco_3.jpeg);
+    background-size: cover;
+    background-position: center;
+    
   }
 
   /* RESPONSIVITÉ */
