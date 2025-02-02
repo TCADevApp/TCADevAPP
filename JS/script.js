@@ -726,47 +726,55 @@
     if (query.length === 0) {
       listRecherche.style.display = 'none'; // Cache la liste si aucun texte n'est saisi
       return;
+    } else if (query.includes('lig')){
+      const results = lignesDeTransport.filter((ligne) => 
+        ligne.id && ligne.id.toLowerCase().includes(query) // Vérifie si l'id de la ligne correspond à la recherche
+      );
+      resultsList(results);
+    } else{
+      const results = lignesDeTransport.filter((ligne) => 
+        ligne.nom && ligne.nom.toLowerCase().includes(query) // Vérifie si le nom de la ligne correspond à la recherche
+      );
+      resultsList(results);
     }
 
-    const results = lignesDeTransport.filter((ligne) => 
-      ligne.nom && ligne.nom.toLowerCase().includes(query) // Vérifie si le nom de la ligne correspond à la recherche
-    );
-
-    if (results.length > 0) {
-      listRecherche.style.display = 'flex'; // Affiche la liste des résultats
-
-      results.forEach((ligne) => {
-        const ligneResultat = document.createElement('p');
-        ligneResultat.textContent = ligne.nom; // Ajoute le nom de la ligne dans la liste
-        ligneResultat.classList.add('search__result'); // Ajoute une classe pour le style si besoin
-        ligneResultat.id = ligne.id; // Ajoute l'id de la ligne comme attribut id
-
-        // Ajout du résultat à la liste
-        try {
-          listRecherche.appendChild(ligneResultat);
-        } catch (error) {
-          console.error('Erreur lors de l’ajout du résultat :', error);
-        }
-        
-        // Écouteur d'événements pour afficher les détails de la ligne
-        ligneResultat.addEventListener('click', () => {
-          // Appel de la fonction sectionLinesShow
-          sectionLinesShow();
-
-          const idLigne = ligneResultat.id;
-          console.log(idLigne);
-
-          // Appel de la function trouverElementDuTableau
-          trouverElementDuTableau(idLigne);
+    function resultsList(results) {
+      if (results.length > 0) {
+        listRecherche.style.display = 'flex'; // Affiche la liste des résultats
+  
+        results.forEach((ligne) => {
+          const ligneResultat = document.createElement('p');
+          ligneResultat.textContent = ligne.nom; // Ajoute le nom de la ligne dans la liste
+          ligneResultat.classList.add('search__result'); // Ajoute une classe pour le style si besoin
+          ligneResultat.id = ligne.id; // Ajoute l'id de la ligne comme attribut id
+  
+          // Ajout du résultat à la liste
+          try {
+            listRecherche.appendChild(ligneResultat);
+          } catch (error) {
+            console.error('Erreur lors de l’ajout du résultat :', error);
+          }
+          
+          // Écouteur d'événements pour afficher les détails de la ligne
+          ligneResultat.addEventListener('click', () => {
+            // Appel de la fonction sectionLinesShow
+            sectionLinesShow();
+  
+            const idLigne = ligneResultat.id;
+            console.log(idLigne);
+  
+            // Appel de la function trouverElementDuTableau
+            trouverElementDuTableau(idLigne);
+          });
         });
-      });
-    } else {
-      // Si aucun résultat, on affiche un message
-      const noResult = document.createElement('p');
-      noResult.textContent = 'Aucun résultat trouvé.';
-      noResult.classList.add('search__no-result');
-      listRecherche.appendChild(noResult);
-    }
+      } else {
+        // Si aucun résultat, on affiche un message
+        const noResult = document.createElement('p');
+        noResult.textContent = 'Aucun résultat trouvé.';
+        noResult.classList.add('search__no-result');
+        listRecherche.appendChild(noResult);
+      }
+    } 
   });
 
   // Écouteur d'événements pour afficher ou masquer la liste de recherche
