@@ -26,17 +26,12 @@
         </div>
       </div>
       <div class="header__burger">☰</div> 
-      <nav class="header__menu">
-          <button class="menu__container menu__lines--btn" alt="Bouton Lignes">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 18L7 4m13 14L17 4m-5 7V9m0-3V4"/><path fill="currentColor" d="m9.158 19.54l2.118-4.502c.231-.49.347-.736.505-.813a.5.5 0 0 1 .438 0c.158.077.274.322.505.813l2.118 4.502c.347.737.52 1.106.455 1.298a.5.5 0 0 1-.368.326c-.198.043-.543-.173-1.235-.605l-1.27-.794c-.154-.096-.23-.144-.313-.163a.5.5 0 0 0-.222 0c-.082.019-.16.067-.313.163l-1.27.794c-.692.432-1.037.648-1.235.605a.5.5 0 0 1-.368-.326c-.066-.192.108-.56.455-1.298"/></g></svg>
-          </button>
-          <button class="menu__container menu__contact--btn" alt="Bouton Contact">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><circle cx="24.027" cy="24.013" r="21.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M27.373 24.937c5.604 1.056 7.926 3.89 7.926 3.89c.962 1.667 0 3.96 0 3.96c-3.25 4.046-8.181 4.471-11.297 4.471c-3.115 0-8.046-.425-11.296-4.471c0 0-.962-2.293 0-3.96c0 0 2.322-2.833 7.926-3.89"/><ellipse cx="24.002" cy="18.369" rx="6.64" ry="7.625"/></g></svg>
-          </button>
-          <button class="menu__container menu__about--btn" alt="Bouton À propos">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>
-          </button>
-          <button class="sign__in">S'inscrire</button>
+      <nav class="nav__menu">
+        <button class="menu__container menu__home--btn" alt="Bouton Accueil">Accueil</button>
+        <button class="menu__container menu__lines--btn" alt="Bouton Lignes">Lignes</button>
+        <button class="menu__container menu__contact--btn" alt="Bouton Contact">Contact</button>
+        <button class="menu__container menu__about--btn" alt="Bouton À propos">À propos</button>
+        <button class="menu__container sign__in">S'inscrire</button>
       </nav>
   </header>
 
@@ -66,13 +61,13 @@
   
       <div class="home__lines">
         <div class="home__lines--div">
-          <img src="images/Transco_2.jpg" alt="Image de bus transco" class="home__lines--image">
+          <img class="home__lines--image" src="images/Transco_2.jpg" alt="Image de bus transco" >
           <div class="home__lines--container">
             <h2 class="home__lines--title">Nos lignes principales</h2>
-            <div class="home__lines--list">
+            <div class="home__lines--list show__plus--lines">
             </div>
           </div>
-          <a class="show__plus--lines">Voir plus ...</a>
+          <!--<a class="">Voir plus ...</a>-->
         </div>
       </div>
     
@@ -166,19 +161,21 @@
 
     <section class="about__page">
       <h2 class="about__title">Qui sommes-nous ?</h2>
-        <div class="about__image">
-          <p>Image ou logo ici</p>
-        </div>
-        <p class="about__text">
+      <div class="about__image">
+        <p>Image ou logo ici</p>
+      </div>
+      <div class="about__text">
+        <p class="about__text--container">
           TCA (Transport Public TRANSCO Assistance) est un système dédié à la gestion des informations sur les lignes de 
           transport public dans la ville de Kinshasa. Notre objectif est de fournir une plateforme claire et accessible 
           pour aider les usagers de TRANSCO à planifier leurs déplacements en toute simplicité.
         </p>
-        <p class="about__text">
+        <p class="about__text--container">
           Avec plus de 52 lignes actives, TRANSCO dessert des milliers de passagers chaque jour. Notre plateforme vous 
           permet de consulter les itinéraires, les arrêts et de recevoir des informations en temps réel pour rendre vos 
           déplacements plus efficaces et agréables.
         </p>
+      </div>
     </section>
 
     <section class="ads">
@@ -191,12 +188,13 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__logo">TCA</div>
-      <div class="footer__links">
-        <a href="#">Accueil</a>
-        <a href="#">Lignes</a>
-        <a href="#">Contact</a>
-        <a href="#">À propos</a>
-      </div>
+      <nav class="nav__menu">
+        <button class="menu__container menu__home--btn" alt="Bouton Accueil">Accueil</button>
+        <button class="menu__container menu__lines--btn" alt="Bouton Lignes">Lignes</button>
+        <button class="menu__container menu__contact--btn" alt="Bouton Contact">Contact</button>
+        <button class="menu__container menu__about--btn" alt="Bouton À propos">À propos</button>
+        <button class="menu__container sign__in">S'inscrire</button>
+      </nav>
       <div class="footer__social">
         <a href="#">
           <svg alt="Logo Facebook" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">

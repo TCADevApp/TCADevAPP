@@ -1,13 +1,13 @@
 // Gestion du menu burger
   const burger = document.querySelector('.header__burger');
-  const menu = document.querySelector('.header__menu');
+  const menu = document.querySelector('.nav__menu');
 
   burger.addEventListener('click', () => {
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
   });
 
 // Gestion du logo pour retour à l'accueil
-  const logo = document.querySelector('.header__logo');
+  const logo = document.querySelectorAll('.header__logo, .menu__home--btn');
 
   // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
     function sectionHomeShow() {
@@ -22,17 +22,40 @@
       aboutpage.style.display = 'none';
 
       if (homePage.style.display === 'block') {
-        linesButton.style.backgroundColor = '#0056b3';
-        contactButton.style.backgroundColor = '#0056b3';
-        aboutButton.style.backgroundColor = '#0056b3';
+        homeButton.forEach((homeButton) =>{
+          homeButton.style.backgroundColor = '#d62828';
+        })
+        linesButton.forEach((linesButton) =>{
+          linesButton.style.backgroundColor = '#0056b3';
+        })
+        contactButton.forEach((contactButton) =>{
+          contactButton.style.backgroundColor = '#0056b3';
+        });
+        aboutButton.forEach((aboutButton) =>{
+          aboutButton.style.backgroundColor = '#0056b3';
+        });
       }
     };
-    logo.addEventListener('click', () => {
-      sectionHomeShow();
-    });
+    logo.forEach((logo) => {
+      logo.addEventListener('click', () => {
+        sectionHomeShow();
+      })});
+
+// Gestion du bouton accueil pour retourner à la page d'accueil
+  const homeButton = document.querySelectorAll('.menu__home--btn');
+  const homePage = document.querySelector('.home__page');
+  if (homePage.style.display === 'fles') {
+    homeButton.style.backgroundColor = '#d62828';
+  } console.log("homePage succes homebtn red")
+
+  // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
+    homeButton.forEach((homeButton)=>{
+      homeButton.addEventListener('click', () => {
+        sectionHomeShow();
+      })});
 
 // Gestion du bouton pour afficher la page des lignes
-  const linesButton = document.querySelector('.menu__lines--btn');
+  const linesButton = document.querySelectorAll('.menu__lines--btn');
   const showPlusLines = document.querySelector('.show__plus--lines');
 
   // Fonction  sectionLinesShow pour afficher la section lines__page et fermer les autres sections
@@ -48,21 +71,32 @@
     aboutpage.style.display = 'none';
 
     if (linesPage.style.display === 'flex') {
-      linesButton.style.backgroundColor = '#d62828';
+      linesButton.forEach((linesButton) =>{
+        linesButton.style.backgroundColor = '#d62828';
+      });
+      
 
-      contactButton.style.backgroundColor = '#0056b3';
-      aboutButton.style.backgroundColor = '#0056b3';
+      homeButton.forEach((homeButton) =>{
+        homeButton.style.backgroundColor = '#0056b3';
+      })
+      contactButton.forEach((contactButton) =>{
+        contactButton.style.backgroundColor = '#0056b3';
+      });
+      aboutButton.forEach((aboutButton) =>{
+        aboutButton.style.backgroundColor = '#0056b3';
+      });
     }
   };
-  linesButton.addEventListener('click', () => {
+  linesButton.forEach((linesButton)=>{
+    linesButton.addEventListener('click', () => {
     sectionLinesShow();
-  });
+  })})
   showPlusLines.addEventListener('click', () =>{
     sectionLinesShow();
   });
 
 // Gestion du bouton pour afficher la page de contact
-  const contactButton = document.querySelector('.menu__contact--btn');
+  const contactButton = document.querySelectorAll('.menu__contact--btn');
   // Fonction  sectionContactShow pour afficher la section contact__page et fermer les autres sections
   function sectionContactShow() {
     const linesPage = document.querySelector('.lines__page');
@@ -76,18 +110,28 @@
     aboutpage.style.display = 'none';
 
     if (contactPage.style.display === 'flex') {
-      contactButton.style.backgroundColor = '#d62828';
+      contactButton.forEach((contactButton) =>{
+        contactButton.style.backgroundColor = '#d62828';
+      });
 
-      linesButton.style.backgroundColor = '#0056b3';
-      aboutButton.style.backgroundColor = '#0056b3';
+      homeButton.forEach((homeButton) =>{
+        homeButton.style.backgroundColor = '#0056b3';
+      })
+      linesButton.forEach((linesButton) =>{
+        linesButton.style.backgroundColor = '#0056b3';
+      })
+      aboutButton.forEach((aboutButton) =>{
+        aboutButton.style.backgroundColor = '#0056b3';
+      });
     }
   };
-  contactButton.addEventListener('click', () => {
+  contactButton.forEach((contactButton) =>{
+    contactButton.addEventListener('click', () => {
     sectionContactShow();
-  });
+  })});
 
 // Gestion du bouton pour afficher la page à propos
-  const aboutButton = document.querySelector('.menu__about--btn');
+  const aboutButton = document.querySelectorAll('.menu__about--btn');
 
   // Fonction  sectionAboutShow pour afficher la section about__page et fermer les autres sections
   function sectionAboutShow() {
@@ -102,15 +146,32 @@
     aboutPage.style.display = 'flex';
 
     if (aboutPage.style.display === 'flex') {
-      aboutButton.style.backgroundColor = '#d62828';
-
-      contactButton.style.backgroundColor = '#0056b3';
-      linesButton.style.backgroundColor = '#0056b3';
+      aboutButton.forEach((aboutButton) =>{
+        aboutButton.style.backgroundColor = '#d62828';
+      });
+      
+      homeButton.forEach((homeButton) =>{
+        homeButton.style.backgroundColor = '#0056b3';
+      })
+      contactButton.forEach((contactButton) =>{
+        contactButton.style.backgroundColor = '#0056b3';
+      });
+      linesButton.forEach((linesButton) =>{
+        linesButton.style.backgroundColor = '#0056b3';
+      })
     }
   };
-  aboutButton.addEventListener('click', () => {
+  aboutButton.forEach((aboutButton) =>{
+    aboutButton.addEventListener('click', () => {
     sectionAboutShow();
-  });
+  })});
+
+// Gestioon Du bouton Inscription
+  const signInButton = document.querySelectorAll('.sign__in');
+  signInButton.forEach((signInButton) =>{
+    signInButton.addEventListener('click', () =>{
+    alert("Fonction non disponible");
+  })});
 
 // Base de données des lignes de transport
   const lignesDeTransport = [
@@ -794,7 +855,6 @@
         container.addEventListener('click', function() {
             // Récupérer l'ID à partir du texte contenu dans le premier paragraphe
             const idLigne = container.firstChild.textContent;
-
             trouverElementDuTableau(idLigne);
         });
     });
