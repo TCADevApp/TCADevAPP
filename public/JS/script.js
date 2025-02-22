@@ -902,3 +902,39 @@
         alert('Veuillez remplir tous les champs.');
     }
   });
+
+  // Initialisation de la carte Google Maps
+let map;
+let markers = {}; // Pour stocker les marqueurs des appareils
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 48.8566, lng: 2.3522 }, // Paris par défaut
+    zoom: 12,
+  });
+}
+
+// Connexion au serveur WebSocket
+const socket = io();
+
+// Reçoit les mises à jour de position des appareils
+socket.on('locationUpdated', (positions) => {
+  for (const [deviceId, position] of Object.entries(positions)) {
+    const { latitude, longitude } = position;
+
+    // Si le marqueur existe déjà, on le met à jour
+    if (markers[deviceId]) {
+      markers[deviceId].setPosition({ lat: latitude, lng: longitude });
+    } else {
+      // Sinon, on crée un nouveau marqueur
+      markers[deviceId] = new google.maps.Marker({
+        position: { lat: latitude, lng: longitude },
+        map: map,
+        title: Appareil //${deviceId},
+      });
+    }
+  }
+});
+
+// Initialisation de la carte au chargement de la page
+window.onload = initMap;

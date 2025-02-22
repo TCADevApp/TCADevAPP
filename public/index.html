@@ -33,6 +33,7 @@
         <button class="menu__container menu__about--btn" alt="Bouton À propos">À propos</button>
         <button class="menu__container sign__in">S'inscrire</button>
       </nav>
+    </div>
   </header>
 
   <main class="main__home">
@@ -61,7 +62,7 @@
   
       <div class="home__lines">
         <div class="home__lines--div">
-          <img class="home__lines--image" src="images/Transco_2.jpg" alt="Image de bus transco" >
+          <img class="home__lines--image" src="images/Transco_2.jpg" alt="Image de bus transco">
           <div class="home__lines--container">
             <h2 class="home__lines--title">Nos lignes principales</h2>
             <div class="home__lines--list show__plus--lines">
@@ -106,7 +107,7 @@
           <form id="subscribeForm">
             <input type="text" name="name" placeholder="Votre nom" required>
             <input type="email" name="email" placeholder="Votre adresse mail" required>
-            <button type="submit">Enregistre</button>
+            <button type="submit">Enregistrer</button>
           </form>
         </div>
       </div>
@@ -138,12 +139,15 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptate non, labore, dicta eligendi architecto necessitatibus sapiente, minima ex deserunt mollitia aperiam rerum sequi cum autem? Officia, laudantium obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iusto ut dolore ducimus autem non in quas magnam ipsa, earum consectetur quam perspiciatis facilis. Amet aliquid doloremque repudiandae dicta quis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cum, praesentium, aliquid consequatur natus voluptas placeat quas minima veritatis nesciunt esse asperiores ipsum atque. Enim voluptatem recusandae ex dolorum sit!</p>
         </div>
         <div class="details__line">
-          <button class="close__btn">Fermet</button>
+          <button class="close__btn">Fermer</button>
           <div class="details__line--container">
+            <div class="details__line--map"></div>
           </div>
-          <div class="details__line--map"></div>
         </div>
       </div>
+      <h1>Suivi des Appareils en Temps Réel</h1>
+      <div id="map"></div> <!-- Conteneur pour la carte -->
+    </section>
     </section>
   
     <section class="contact__page">
@@ -221,7 +225,7 @@
     </div>
   </footer>
 </body>
-
-<script src="JS/script.js" defer></script>
+<script src="/socket.io/socket.io.js"></script> <!-- Socket.io côté client -->
+<script src="/JS/script.js" defer></script>
 
 </html>
