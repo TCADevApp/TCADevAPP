@@ -759,7 +759,7 @@
       }
       // Fonction pour afficher la carte Google Maps
         function afficherCarte(lienMaps) {
-          const detailsMapContainer = document.querySelector('.details__line--map');
+          const detailsMapContainer = document.querySelector('.details__line--container');
           detailsMapContainer.innerHTML = ''; // Réinitialiser le contenu de la carte
 
           // Créer un iframe pour Google Maps
