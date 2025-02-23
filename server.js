@@ -1,13 +1,13 @@
 // Importation des modules nécessaires
 const express = require('express');
 const http = require('http');
-const { Server } = require('socket.io');
+const socketIo = require('socket.io');
 const path = require('path');
 
 // Initialisation de l'application Express
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = socketIo(server);
 
 // Dossier public pour les fichiers statiques (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'public')));

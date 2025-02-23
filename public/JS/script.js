@@ -22,16 +22,16 @@
       aboutpage.style.display = 'none';
 
       if (homePage.style.display === 'block') {
-        homeButton.forEach((homeButton) =>{
+        homeButton.forEach((homeButton) => {
           homeButton.style.backgroundColor = '#d62828';
-        })
-        linesButton.forEach((linesButton) =>{
+        });
+        linesButton.forEach((linesButton) => {
           linesButton.style.backgroundColor = '#0056b3';
-        })
-        contactButton.forEach((contactButton) =>{
+        });
+        contactButton.forEach((contactButton) => {
           contactButton.style.backgroundColor = '#0056b3';
         });
-        aboutButton.forEach((aboutButton) =>{
+        aboutButton.forEach((aboutButton) => {
           aboutButton.style.backgroundColor = '#0056b3';
         });
       }
@@ -44,9 +44,12 @@
 // Gestion du bouton accueil pour retourner à la page d'accueil
   const homeButton = document.querySelectorAll('.menu__home--btn');
   const homePage = document.querySelector('.home__page');
-  if (homePage.style.display === 'fles') {
-    homeButton.style.backgroundColor = '#d62828';
-  } console.log("homePage succes homebtn red")
+  if (homePage.style.display === 'flex') {
+    homeButton.forEach((homeButton) => {
+      homeButton.style.backgroundColor = '#d62828';
+    });
+  }
+  console.log("homePage succes homebtn red");
 
   // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
     homeButton.forEach((homeButton)=>{
@@ -902,39 +905,41 @@
         alert('Veuillez remplir tous les champs.');
     }
   });
+/*
+// Initialisation de la carte Google Maps
+  let map;
+  let markers = {}; // Pour stocker les marqueurs des appareils
 
-  // Initialisation de la carte Google Maps
-let map;
-let markers = {}; // Pour stocker les marqueurs des appareils
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 48.8566, lng: 2.3522 }, // Paris par défaut
-    zoom: 12,
-  });
-}
-
-// Connexion au serveur WebSocket
-const socket = io();
-
-// Reçoit les mises à jour de position des appareils
-socket.on('locationUpdated', (positions) => {
-  for (const [deviceId, position] of Object.entries(positions)) {
-    const { latitude, longitude } = position;
-
-    // Si le marqueur existe déjà, on le met à jour
-    if (markers[deviceId]) {
-      markers[deviceId].setPosition({ lat: latitude, lng: longitude });
-    } else {
-      // Sinon, on crée un nouveau marqueur
-      markers[deviceId] = new google.maps.Marker({
-        position: { lat: latitude, lng: longitude },
-        map: map,
-        title: Appareil //${deviceId},
-      });
-    }
+  function initMap() {
+    map = new google.maps.Map(document.querySelector('.map'), {
+      center: { lat: -4.3276, lng: 15.3136 }, // Kinshasa par défaut
+      zoom: 12,
+    });
   }
-});
 
-// Initialisation de la carte au chargement de la page
-window.onload = initMap;
+  // Connexion au serveur WebSocket
+  const socket = io();
+
+  // Reçoit les mises à jour de position des appareils
+  socket.on('locationUpdated', (positions) => {
+    for (const [deviceId, position] of Object.entries(positions)) {
+      const { latitude, longitude } = position;
+
+      // Si le marqueur existe déjà, on le met à jour
+      if (markers[deviceId]) {
+        markers[deviceId].setPosition({ lat: latitude, lng: longitude });
+      } else {
+        // Sinon, on crée un nouveau marqueur
+        markers[deviceId] = new google.maps.Marker({
+          position: { lat: latitude, lng: longitude },
+          map: map,
+          title: Appareil `${deviceId}`,
+        });
+      }
+    }
+  });
+
+  // Initialisation de la carte au chargement de la page
+  window.onload = initMap;
+
+*/

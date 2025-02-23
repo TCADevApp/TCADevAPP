@@ -452,6 +452,11 @@
     position: absolute;
     right: 0;
   }
+
+  .map{
+    width: 50%;
+    height: 400px;
+  }
   
 /* CONTENUE DE LA PAGE CONTACT*/
   .contact__page{

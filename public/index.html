@@ -146,7 +146,18 @@
         </div>
       </div>
       <h1>Suivi des Appareils en Temps Réel</h1>
-      <div id="map"></div> <!-- Conteneur pour la carte -->
+      <div class="map">
+        <iframe
+          width="600"
+          height="450"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+            &q=Space+Needle,Seattle+WA">
+        </iframe>
+      </div> <!-- Conteneur pour la carte -->
     </section>
     </section>
   
@@ -227,5 +238,6 @@
 </body>
 <script src="/socket.io/socket.io.js"></script> <!-- Socket.io côté client -->
 <script src="/JS/script.js" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API_GOOGLE_MAPS"></script> <!-- API Google Maps -->
 
 </html>
