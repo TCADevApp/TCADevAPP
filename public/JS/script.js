@@ -752,14 +752,13 @@
         detailsLineContainer.appendChild(distanceElement);
         detailsLineContainer.appendChild(arretsTitre);
         detailsLineContainer.appendChild(arretsList);
-        //detailsLineContainer.appendChild(closeButton);
 
         // Appeler la fonction pour afficher la carte Google Maps
         afficherCarte(ligne.lienMaps);
       }
       // Fonction pour afficher la carte Google Maps
         function afficherCarte(lienMaps) {
-          const detailsMapContainer = document.querySelector('.details__line--container');
+          const detailsMapContainer = document.querySelector('.details__line--map');
           detailsMapContainer.innerHTML = ''; // Réinitialiser le contenu de la carte
 
           // Créer un iframe pour Google Maps
