@@ -49,7 +49,6 @@
       homeButton.style.backgroundColor = '#d62828';
     });
   }
-  console.log("homePage succes homebtn red");
 
   // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
     homeButton.forEach((homeButton)=>{
@@ -767,7 +766,7 @@
           const mapIframe = document.createElement('iframe');
           mapIframe.src = lienMaps; // Utiliser le lien de Google Maps
           mapIframe.allowFullscreen = true; // Autoriser le mode plein écran
-          mapIframe.loading = 'lazy'; // Chargement paresseux
+          // mapIframe.loading = 'lazy'; // Chargement paresseux
 
           // Ajouter l'iframe à la div details__line--map
           detailsMapContainer.appendChild(mapIframe);

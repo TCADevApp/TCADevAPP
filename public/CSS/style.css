@@ -419,9 +419,12 @@
     height: 100%;
     align-items: center;
     display: none;
+    justify-content: center;
+    align-items: center;
   }
 
   .details__line--container{
+    background-color: var(--red);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -451,11 +454,6 @@
     height: 30px;
     position: absolute;
     right: 0;
-  }
-
-  .map{
-    width: 50%;
-    height: 400px;
   }
   
 /* CONTENUE DE LA PAGE CONTACT*/
