@@ -76,14 +76,13 @@
       linesButton.forEach((linesButton) =>{
         linesButton.style.backgroundColor = '#d62828';
       });
-      
 
       homeButton.forEach((homeButton) =>{
         homeButton.style.backgroundColor = '#0056b3';
       })
       contactButton.forEach((contactButton) =>{
         contactButton.style.backgroundColor = '#0056b3';
-      });
+      })
       aboutButton.forEach((aboutButton) =>{
         aboutButton.style.backgroundColor = '#0056b3';
       });
@@ -174,6 +173,40 @@
     signInButton.addEventListener('click', () =>{
     alert("Fonction non disponible");
   })});
+
+// Gestion du bouton pour afficher l'overlay lines-list
+  const showLinesButton = document.querySelector('.show__lines--btn');
+  const overlayLinesList = document.querySelector('.lines__list');
+  const closeOverlay = document.querySelector('.close__lines--btn');
+  const stopsLineContainer = document.querySelector('.line__stops');
+
+  showLinesButton.addEventListener('click', () => {
+    overlayLinesList.style.display = overlayLinesList.style.display === 'flex' ? 'none' : 'flex';
+    afficherOverlayLiensList();
+    afficherOverlayStopsLine();
+  });
+
+  function afficherOverlayLiensList() {
+    if (overlayLinesList.style.display === 'flex') {
+      const overlayLinesListDiv = document.querySelector('.lines__list div');
+      const left = getComputedStyle(overlayLinesListDiv).width; // Utilisez getComputedStyle pour obtenir la largeur
+      showLinesButton.style.left = left;
+      console.log(left);
+  } else {
+      showLinesButton.style.left = "0"; 
+  }
+  }
+
+  function afficherOverlayStopsLine() {
+    if (stopsLineContainer.style.display === 'flex') {
+      const overlayLinesList = document.querySelector('.lines__list');
+      const left = getComputedStyle(overlayLinesList).width; // Utilisez getComputedStyle pour obtenir la largeur
+      showLinesButton.style.left = left;
+      console.log(left);
+    } else {
+      afficherOverlayLiensList();
+    }
+  }
 
 // Base de données des lignes de transport
   const lignesDeTransport = [
@@ -695,6 +728,7 @@
   ]; 
 
 // Affichage des lignes dans la page lines__page
+
   for (let i = 0; i < lignesDeTransport.length; i++) {
     const listDeLignes = document.querySelector('.lines__list--container');
     const ligneTrajet = document.createElement('li');
@@ -710,8 +744,7 @@
 
     try {
       listDeLignes.appendChild(ligneTrajet);
-    } catch (error) {
-      
+    } catch (error) { 
     }
   }
 
@@ -739,22 +772,22 @@
 
 // Fonction pour trouver un element dans le tableau
   function trouverElementDuTableau(idLigne) {
-    const detailsLine = document.querySelector('.details__line')
-    const detailsLineContainer = document.querySelector('.details__line--container');
-    const detailsContainer = document.querySelector('.lines__details--container');
-    const detailsMapContainer = document.querySelector('.details__line--map');
+    const lineMap = document.querySelector('.line__map')
+    const stopsLineContainer = document.querySelector('.line__stops');
+    const lineMapKin = document.querySelector('.line__map--kin');
+    //const lineMapContainer = document.querySelector('.line__map--container');
 
     // Trouver la ligne correspondante dans le tableau lignesDeTransport
     const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
 
     if (ligne) {
-        // Vérifie si la div details__line--container est déjà visible
-        if (detailsLine.style.display === 'flex') {
-            // Réinitialiser la div details__line
-            detailsLineContainer.innerHTML = '';
+        // Vérifie si la div line__map est déjà visible
+        if (lineMap.style.display === 'flex' && stopsLineContainer.style.display === 'flex') {
+            stopsLineContainer.innerHTML = ''; // Réinitialiser la div line__stops
+            lineMap.innerHTML = '';// Réinitialiser la div line__map
         } else {
-            detailsContainer.style.display = 'none'; // Cacher le conteneur des détails de la ligne
-            detailsLine.style.display = 'flex'; // Rendre visible
+            lineMapKin.style.display = 'none'; // Cacher le conteneur des détails de la ligne
+            lineMap.style.display = 'flex'; // Rendre visible
         }
 
         // Créer et ajouter les éléments pour les détails de la ligne
@@ -777,31 +810,20 @@
             arretsList.appendChild(arretItem);
         });
 
-        // Bouton pour fermer
-        const closeButton = document.querySelector('.close__btn');
-        closeButton.addEventListener('click', () => {
-            // Réinitialiser la div details__line--container
-            detailsLineContainer.innerHTML = '';
-            detailsMapContainer.innerHTML = '';
-
-            detailsLine.style.display = 'none'; // Cacher la div details__line--container
-            detailsContainer.style.display = 'flex'; // Afficher le conteneur principal
-        });
-
-        // Ajouter les éléments à la div details__line--container
-        detailsLineContainer.appendChild(idElement);
-        detailsLineContainer.appendChild(nomElement);
-        detailsLineContainer.appendChild(distanceElement);
-        detailsLineContainer.appendChild(arretsTitre);
-        detailsLineContainer.appendChild(arretsList);
+        // Ajouter les éléments à la div line__stops
+        stopsLineContainer.appendChild(idElement);
+        stopsLineContainer.appendChild(nomElement);
+        stopsLineContainer.appendChild(distanceElement);
+        stopsLineContainer.appendChild(arretsTitre);
+        stopsLineContainer.appendChild(arretsList);
 
         // Appeler la fonction pour afficher la carte Google Maps
         afficherCarte(ligne.lienMaps);
       }
       // Fonction pour afficher la carte Google Maps
         function afficherCarte(lienMaps) {
-          const detailsMapContainer = document.querySelector('.details__line--map');
-          detailsMapContainer.innerHTML = ''; // Réinitialiser le contenu de la carte
+          const lineMap = document.querySelector('.line__map');
+          lineMap.innerHTML = ''; // Réinitialiser le contenu de la carte
 
           // Créer un iframe pour Google Maps
           const mapIframe = document.createElement('iframe');
@@ -809,8 +831,22 @@
           mapIframe.allowFullscreen = true; // Autoriser le mode plein écran
           // mapIframe.loading = 'lazy'; // Chargement paresseux
 
-          // Ajouter l'iframe à la div details__line--map
-          detailsMapContainer.appendChild(mapIframe);
+          // créer un bouton pour fermer la carte
+          const closeButton = document.createElement('button');
+          closeButton.textContent = 'X';
+          closeButton.classList.add('close__btn');
+          
+          // Écouteur d'événements pour fermer la carte 
+          closeButton.addEventListener('click', () => {
+            lineMap.style.display = 'none'; // Cacher la carte
+            stopsLineContainer.style.display = 'none'; // Cacher les détails de la ligne
+            lineMapKin.style.display = 'flex'; // Afficher le conteneur des détails de la ligne
+            afficherOverlayLiensList();
+          });
+
+          // Ajouter l'iframe et le button fermer à la div line__map
+          lineMap.appendChild(mapIframe);
+          lineMap.appendChild(closeButton);
         }
 
       // Appeler la fonction pour activer l'écoute des clics
@@ -861,14 +897,15 @@
           
           // Écouteur d'événements pour afficher les détails de la ligne
           ligneResultat.addEventListener('click', () => {
-            // Appel de la fonction sectionLinesShow
             sectionLinesShow();
-  
             const idLigne = ligneResultat.id;
             console.log(idLigne);
-  
-            // Appel de la function trouverElementDuTableau
             trouverElementDuTableau(idLigne);
+            const overlayLinesList = document.querySelector('.lines__list');
+            overlayLinesList.style.display = 'flex'
+            const stopsLineContainer = document.querySelector('.line__stops');
+            stopsLineContainer.style.display = 'flex';
+            afficherOverlayStopsLine();
           });
         });
       } else {
@@ -898,7 +935,10 @@
         container.addEventListener('click', function() {
             // Récupérer l'ID à partir du texte contenu dans le premier paragraphe
             const idLigne = container.firstChild.textContent;
+            const stopsLineContainer = document.querySelector('.line__stops');
+            stopsLineContainer.style.display = 'flex';
             trouverElementDuTableau(idLigne);
+            afficherOverlayStopsLine();
         });
     });
   }
@@ -981,5 +1021,4 @@
 
   // Initialisation de la carte au chargement de la page
   window.onload = initMap;
-
 */
