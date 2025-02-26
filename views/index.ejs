@@ -1,0 +1,90 @@
+<%- include("./partials/header.ejs", {title: "Home__page"}) %>
+    <section class="home__page">
+      <div class="home__welcome">
+        <div class="home__text">
+          <h2 class="home__title">Bienvenue sur le site web TCA</h2>
+          <p>Votre guide pour les transports en commun à Kinshasa</p>
+        </div>
+      </div>
+  
+      <div class="home__about">
+        <div>
+          <h2 class="home__about--title">Itineraires des bus transco</h2>
+          <p class="home__about--text">
+            Consultez les itinéraires détaillés de chaque ligne de bus 
+            TRANSCO. Trouvez la ligne qui vous convient le mieux pour 
+            vous rendre à votre destination.
+          </p>
+          <p class="home__about--text">
+            Explorez les horaires de départ et d'arrivée pour chaque 
+            ligne. Planifiez votre trajet en toute confiance, en sachant que vous arriverez à l'heure.
+          </p>
+        </div>
+      </div>
+  
+      <div class="home__lines">
+        <div class="home__lines--div">
+          <img class="home__lines--image" src="images/Transco_2.jpg" alt="Image de bus transco">
+          <div class="home__lines--container">
+            <h2 class="home__lines--title">Nos lignes principales</h2>
+            <div class="home__lines--list show__plus--lines">
+            </div>
+          </div>
+          <!--<a class="">Voir plus ...</a>-->
+        </div>
+      </div>
+    
+      <div class="home__info">
+        <div class="home__info--container">
+          <h3>Informations sur TRANSCO, l'entreprise de 
+            transports en commun
+          </h3>
+          <div class="info--container">
+            <div class="info--containerD">1</div>
+            <div class="info--containerDiv">
+              <p><strong>Mission</strong></p>
+              <p>Assurer un transport public fiable et accessible à tous les habitants de Kinshasa.
+              </p>
+            </div>
+          </div>
+          <div class="info--container">
+            <div class="info--containerD">2</div>
+            <div class="info--containerDiv">
+              <p><strong>Valeurs</strong></p>
+              <p>Sécurité, efficacité, respect, engagement envers la communauté.
+              </p>
+            </div>
+          </div>
+          <div class="info--container">
+            <div class="info--containerD">3</div>
+            <div class="info--containerDiv">
+              <p><strong>Histoire</strong></p>
+              <p>Fondée en 2005, TRANSCO a révolutionné le transport public à Kinshasa.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="home__info--inscription">
+          <h3>Recevez des informations par mail</h3>
+          <form id="subscribeForm">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre adresse mail" required>
+            <button type="submit">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="home__container">
+        <div class="home__container--text">
+          <div>
+            <h3>Text</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iusto ut dolore ducimus autem non in quas magnam ipsa, earum consectetur quam perspiciatis facilis. Amet aliquid doloremque repudiandae dicta quis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cum, praesentium, aliquid consequatur natus voluptas placeat quas minima veritatis nesciunt esse asperiores ipsum atque. Enim voluptatem recusandae ex dolorum sit!
+            </p>
+          </div>
+          <img class="home__container--img" src="images/Image_1.png" alt="Image de bus transco">
+        </div>
+      </div>
+    </section>
+<%- include("./partials/publicite.ejs") %>
+<%- include("./partials/footer.ejs") %>

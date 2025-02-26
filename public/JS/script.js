@@ -6,173 +6,53 @@
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
   });
 
-// Gestion du logo pour retour à l'accueil
-  const logo = document.querySelectorAll('.header__logo, .menu__home--btn');
-
-  // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
-    function sectionHomeShow() {
-      const linesPage = document.querySelector('.lines__page');
-      const homePage = document.querySelector('.home__page');
-      const contactPage = document.querySelector('.contact__page');
-      const aboutpage = document.querySelector('.about__page');
-
-      linesPage.style.display = 'none';
-      homePage.style.display = 'block';
-      contactPage.style.display = 'none';
-      aboutpage.style.display = 'none';
-
-      if (homePage.style.display === 'block') {
-        homeButton.forEach((homeButton) => {
-          homeButton.style.backgroundColor = '#d62828';
-        });
-        linesButton.forEach((linesButton) => {
-          linesButton.style.backgroundColor = '#0056b3';
-        });
-        contactButton.forEach((contactButton) => {
-          contactButton.style.backgroundColor = '#0056b3';
-        });
-        aboutButton.forEach((aboutButton) => {
-          aboutButton.style.backgroundColor = '#0056b3';
-        });
-      }
-    };
-    logo.forEach((logo) => {
-      logo.addEventListener('click', () => {
-        sectionHomeShow();
-      })});
-
-// Gestion du bouton accueil pour retourner à la page d'accueil
-  const homeButton = document.querySelectorAll('.menu__home--btn');
+// Gestion des pages
   const homePage = document.querySelector('.home__page');
-  if (homePage.style.display === 'flex') {
-    homeButton.forEach((homeButton) => {
-      homeButton.style.backgroundColor = '#d62828';
+  const linesPage = document.querySelector(".lines__page"); 
+  const contactPage = document.querySelector('.contact__page');
+  const aboutPage = document.querySelector('.about__page');
+  function locationFlex() {
+    if (homePage) {
+      homePageShow();
+    } else if (linesPage){
+      linesPageShow();
+    } else if (contactPage) {
+      contactPageShow();
+    } else if (aboutPage) {
+      aboutPageShow();
+    } else{
+      console.log('404')
+    }
+  };locationFlex();
+
+// Gestion des buttons header 
+  function homePageShow() {
+    const homeBtn = document.querySelectorAll('.menu__home--btn');
+    homeBtn.forEach((homeBtn) =>{
+      homeBtn.style.backgroundColor = '#d62828';
     });
   }
-
-  // Fonction  sectionHomeShow pour afficher la section home__page et fermer les autres sections
-    homeButton.forEach((homeButton)=>{
-      homeButton.addEventListener('click', () => {
-        sectionHomeShow();
-      })});
-
-// Gestion du bouton pour afficher la page des lignes
-  const linesButton = document.querySelectorAll('.menu__lines--btn');
-  const showPlusLines = document.querySelector('.show__plus--lines');
-
-  // Fonction  sectionLinesShow pour afficher la section lines__page et fermer les autres sections
-  function sectionLinesShow() {
-    const linesPage = document.querySelector('.lines__page');
-    const homePage = document.querySelector('.home__page');
-    const contactPage = document.querySelector('.contact__page');
-    const aboutpage = document.querySelector('.about__page');
-
-    linesPage.style.display = 'flex';
-    homePage.style.display = 'none';
-    contactPage.style.display = 'none';
-    aboutpage.style.display = 'none';
-
-    if (linesPage.style.display === 'flex') {
-      linesButton.forEach((linesButton) =>{
-        linesButton.style.backgroundColor = '#d62828';
-      });
-
-      homeButton.forEach((homeButton) =>{
-        homeButton.style.backgroundColor = '#0056b3';
-      })
-      contactButton.forEach((contactButton) =>{
-        contactButton.style.backgroundColor = '#0056b3';
-      })
-      aboutButton.forEach((aboutButton) =>{
-        aboutButton.style.backgroundColor = '#0056b3';
-      });
-    }
-  };
-  linesButton.forEach((linesButton)=>{
-    linesButton.addEventListener('click', () => {
-    sectionLinesShow();
-  })})
-  showPlusLines.addEventListener('click', () =>{
-    sectionLinesShow();
-  });
-
-// Gestion du bouton pour afficher la page de contact
-  const contactButton = document.querySelectorAll('.menu__contact--btn');
-  // Fonction  sectionContactShow pour afficher la section contact__page et fermer les autres sections
-  function sectionContactShow() {
-    const linesPage = document.querySelector('.lines__page');
-    const homePage = document.querySelector('.home__page');
-    const contactPage = document.querySelector('.contact__page');
-    const aboutpage = document.querySelector('.about__page');
-
-    linesPage.style.display = 'none';
-    homePage.style.display = 'none';
-    contactPage.style.display = 'flex';
-    aboutpage.style.display = 'none';
-
-    if (contactPage.style.display === 'flex') {
-      contactButton.forEach((contactButton) =>{
-        contactButton.style.backgroundColor = '#d62828';
-      });
-
-      homeButton.forEach((homeButton) =>{
-        homeButton.style.backgroundColor = '#0056b3';
-      })
-      linesButton.forEach((linesButton) =>{
-        linesButton.style.backgroundColor = '#0056b3';
-      })
-      aboutButton.forEach((aboutButton) =>{
-        aboutButton.style.backgroundColor = '#0056b3';
-      });
-    }
-  };
-  contactButton.forEach((contactButton) =>{
-    contactButton.addEventListener('click', () => {
-    sectionContactShow();
-  })});
-
-// Gestion du bouton pour afficher la page à propos
-  const aboutButton = document.querySelectorAll('.menu__about--btn');
-
-  // Fonction  sectionAboutShow pour afficher la section about__page et fermer les autres sections
-  function sectionAboutShow() {
-    const linesPage = document.querySelector('.lines__page');
-    const homePage = document.querySelector('.home__page');
-    const contactPage = document.querySelector('.contact__page');
-    const aboutPage = document.querySelector('.about__page');
-
-    linesPage.style.display = 'none';
-    homePage.style.display = 'none';
-    contactPage.style.display = 'none';
-    aboutPage.style.display = 'flex';
-
-    if (aboutPage.style.display === 'flex') {
-      aboutButton.forEach((aboutButton) =>{
-        aboutButton.style.backgroundColor = '#d62828';
-      });
-      
-      homeButton.forEach((homeButton) =>{
-        homeButton.style.backgroundColor = '#0056b3';
-      })
-      contactButton.forEach((contactButton) =>{
-        contactButton.style.backgroundColor = '#0056b3';
-      });
-      linesButton.forEach((linesButton) =>{
-        linesButton.style.backgroundColor = '#0056b3';
-      })
-    }
-  };
-  aboutButton.forEach((aboutButton) =>{
-    aboutButton.addEventListener('click', () => {
-    sectionAboutShow();
-  })});
-
-// Gestioon Du bouton Inscription
-  const signInButton = document.querySelectorAll('.sign__in');
-  signInButton.forEach((signInButton) =>{
-    signInButton.addEventListener('click', () =>{
-    alert("Fonction non disponible");
-  })});
+  
+  function linesPageShow() {
+    const linesButton = document.querySelectorAll('.menu__lines--btn');
+    linesButton.forEach((linesButton) =>{
+      linesButton.style.backgroundColor = '#d62828';
+    });
+  }
+  
+  function contactPageShow() {
+    const contactButton = document.querySelectorAll('.menu__contact--btn');
+    contactButton.forEach((contactButton) =>{
+      contactButton.style.backgroundColor = '#d62828';
+    });
+  }
+  
+  function aboutPageShow() {
+    const aboutButton = document.querySelectorAll('.menu__about--btn');
+    aboutButton.forEach((aboutButton) =>{
+      aboutButton.style.backgroundColor = '#d62828';
+    });
+  }
 
 // Gestion du bouton pour afficher l'overlay lines-list
   const showLinesButton = document.querySelector('.show__lines--btn');
@@ -180,18 +60,19 @@
   const closeOverlay = document.querySelector('.close__lines--btn');
   const stopsLineContainer = document.querySelector('.line__stops');
 
-  showLinesButton.addEventListener('click', () => {
-    overlayLinesList.style.display = overlayLinesList.style.display === 'flex' ? 'none' : 'flex';
-    afficherOverlayLiensList();
-    afficherOverlayStopsLine();
-  });
+  if (linesPage) {
+    showLinesButton.addEventListener('click', () => {
+      overlayLinesList.style.display = overlayLinesList.style.display === 'flex' ? 'none' : 'flex';
+      afficherOverlayLiensList();
+      afficherOverlayStopsLine();
+    });
+  }
 
   function afficherOverlayLiensList() {
     if (overlayLinesList.style.display === 'flex') {
       const overlayLinesListDiv = document.querySelector('.lines__list div');
       const left = getComputedStyle(overlayLinesListDiv).width; // Utilisez getComputedStyle pour obtenir la largeur
       showLinesButton.style.left = left;
-      console.log(left);
   } else {
       showLinesButton.style.left = "0"; 
   }
@@ -202,7 +83,6 @@
       const overlayLinesList = document.querySelector('.lines__list');
       const left = getComputedStyle(overlayLinesList).width; // Utilisez getComputedStyle pour obtenir la largeur
       showLinesButton.style.left = left;
-      console.log(left);
     } else {
       afficherOverlayLiensList();
     }
@@ -728,7 +608,6 @@
   ]; 
 
 // Affichage des lignes dans la page lines__page
-
   for (let i = 0; i < lignesDeTransport.length; i++) {
     const listDeLignes = document.querySelector('.lines__list--container');
     const ligneTrajet = document.createElement('li');
@@ -750,7 +629,6 @@
 
 // Affichage des lignes sur la home__page
   const homeLineList = document.querySelector('.home__lines--list');
-
   for (let i = 0; i < 4 ; i++) {
     //Ligne 1
     const ligne1Id = document.createElement('p');
@@ -760,7 +638,8 @@
     const ligne1Distance = document.createElement('p');
     ligne1Distance.textContent = lignesDeTransport[i].distance;
 
-    const ligne1 = document.createElement('div');
+    const ligne1 = document.createElement('a');
+    ligne1.href = "/lignes";
     ligne1.appendChild(ligne1Id);
     ligne1.appendChild(ligne1Nom);
     ligne1.appendChild(ligne1Distance);
@@ -775,7 +654,6 @@
     const lineMap = document.querySelector('.line__map')
     const stopsLineContainer = document.querySelector('.line__stops');
     const lineMapKin = document.querySelector('.line__map--kin');
-    //const lineMapContainer = document.querySelector('.line__map--container');
 
     // Trouver la ligne correspondante dans le tableau lignesDeTransport
     const ligne = lignesDeTransport.find((ligne) => ligne.id === idLigne);
@@ -829,7 +707,7 @@
           const mapIframe = document.createElement('iframe');
           mapIframe.src = lienMaps; // Utiliser le lien de Google Maps
           mapIframe.allowFullscreen = true; // Autoriser le mode plein écran
-          // mapIframe.loading = 'lazy'; // Chargement paresseux
+          mapIframe.loading = 'lazy'; // Chargement paresseux
 
           // créer un bouton pour fermer la carte
           const closeButton = document.createElement('button');
@@ -883,10 +761,11 @@
         listRecherche.style.display = 'flex'; // Affiche la liste des résultats
   
         results.forEach((ligne) => {
-          const ligneResultat = document.createElement('p');
+          const ligneResultat = document.createElement('a');
           ligneResultat.textContent = ligne.nom; // Ajoute le nom de la ligne dans la liste
           ligneResultat.classList.add('search__result'); // Ajoute une classe pour le style si besoin
           ligneResultat.id = ligne.id; // Ajoute l'id de la ligne comme attribut id
+          ligneResultat.href = "/lignes"; // Ajoute l'href de la page lignes
   
           // Ajout du résultat à la liste
           try {
@@ -897,9 +776,8 @@
           
           // Écouteur d'événements pour afficher les détails de la ligne
           ligneResultat.addEventListener('click', () => {
-            sectionLinesShow();
+            locationFlex();
             const idLigne = ligneResultat.id;
-            console.log(idLigne);
             trouverElementDuTableau(idLigne);
             const overlayLinesList = document.querySelector('.lines__list');
             overlayLinesList.style.display = 'flex'
@@ -927,7 +805,7 @@
     }
   });
 
-  // Fonction pour afficher les détails d'une ligne
+  // Fonction pour afficher les arrêts d'une ligne
   function afficherDetailsLigneDepuisListe() {
     const containersLignes = document.querySelectorAll('.lines__list--container li');
 
@@ -958,33 +836,43 @@
     }
 
     /* Vérifier si la recherche correspond à une ligne dans la base 
-    de données si oui appeler la fonction sectionLinesShow() et appeler 
+    de données si oui appeler la fonction locationFlex() et appeler 
     la fonction trouverElementTableau() pour afficher les détails de la 
     ligne recherchée */
     const ligne = lignesDeTransport.find((ligne) => ligne.nom.toLowerCase().includes(query));
 
     if (ligne) {
-        sectionLinesShow();
+        locationFlex();
         trouverElementDuTableau(ligne.id);
     } else {
         alert('Aucun résultat trouvé.');
     }
   });
 
-  // Formulaire de souscription
-  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche le rechargement de la page
+// Gestion du bouton inscrption
+  document.querySelectorAll('sign__in').forEach((signIn) =>{
+    signIn.addEventListener('click', () =>{
+      cons$.log('nope');
+      alert('Pas disponible');
+    })
+  })
 
-    const name = e.target.name.value.trim(); // Récupère et nettoie le nom
-    const email = e.target.email.value.trim(); // Récupère et nettoie l'email
-
-    if (name && email) {
-        alert(`Merci ${name}, vous êtes inscrit avec l'email ${email} !`);
-        e.target.reset(); // Réinitialise le formulaire
-    } else {
-        alert('Veuillez remplir tous les champs.');
-    }
-  });
+// Formulaire de souscription page contact
+  if (homePage) {
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Empêche le rechargement de la page
+  
+      const name = e.target.name.value.trim(); // Récupère et nettoie le nom
+      const email = e.target.email.value.trim(); // Récupère et nettoie l'email
+  
+      if (name && email) {
+          alert(`Merci ${name}, vous êtes inscrit avec l'email ${email} !`);
+          e.target.reset(); // Réinitialise le formulaire
+      } else {
+          alert('Veuillez remplir tous les champs.');
+      }
+    });
+  }
 /*
 // Initialisation de la carte Google Maps
   let map;

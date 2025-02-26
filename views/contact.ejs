@@ -1,0 +1,15 @@
+<%- include("./partials/header.ejs", {title: "contact__page"}) %>
+    <section class="contact__page">
+        <!--<h2 class="contact__title">Nous sommes là pour vous aider</h2>-->
+        <form class="contact__form" id="contactForm">
+        <label for="name">Noms</label>
+        <input type="text" name="name" id="name" placeholder="Votre nom" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Votre adresse email" required>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+        </form>
+    </section>
+<%- include("./partials/publicite.ejs") %>
+<%- include("./partials/footer.ejs") %>
